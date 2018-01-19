@@ -7,10 +7,9 @@ const userSchema = mongoose.Schema({
         type: String,
         unique: true
     },
-    recentImages: [{
-        type: mongoose.Schema.Types.ObjectId,
-        ref: 'Image'
-}]
+    accessToSeries: [{
+        type: Number
+    }]
 });
 
 const UserModel = mongoose.model('User', userSchema);

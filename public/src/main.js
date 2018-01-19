@@ -15,10 +15,12 @@ import newUserForm from './components/new-user-form.vue';
 import existUserForm from './components/exist-user-form.vue';
 import images from './components/images.vue';
 import askForm from './components/ask-form.vue';
+import carousel from './components/carousel.vue';
 
 Vue.component('new-user-form', newUserForm);
 Vue.component('exist-user-form', existUserForm);
 Vue.component('images', images);
+Vue.component('carousel', carousel);
 
 const routes = [
   { path: '/new-user', component: newUserForm },

@@ -3,10 +3,11 @@
             <div class="center-of-sreen">
                 <p>Краткая история моих выпиваний</p>
                 <image-link-list 
-                    :image-list="imagesAvailable.paginationList ? imagesAvailable.paginationList : [0,0,0,0,0,0]"
+                    :image-list="imagesAvailable.paginationList ? imagesAvailable.paginationList : [0,0,0,0,0,0,0,0,0,0]"
                     v-on:changeimage="changeCurentImage">
                     </image-link-list>
                 <image-container :image="(imagesAvailable.list && imagesAvailable.list.length) ? currentImage : ''"></image-container>
+                <carousel></carousel>
             </div>
 
         </div>

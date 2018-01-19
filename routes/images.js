@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const ImageModel = require('../models/imageModel');
 const UserModel = require('../models/userModel');
-const IMAGES_COUNT = 6;
+const IMAGES_COUNT = 10;
 
 router.get('/', function(req, res) {
   const imageCode = req.query.code;
@@ -59,31 +59,50 @@ function makeImagesChainForSlaider(userRecentImages) {
   return imagesSliderTemplate;
 }
 
-function makeImagesLinksForPaginationLine(userRecentImages) {
+function makeImagesLinksForPaginationLine(accessToSeries) {
   let imageListTemplate = [];
   for(let i = 1; i <= IMAGES_COUNT; i++) {
-    let image = userRecentImages.find(image => image.index === i);
-    imageListTemplate.push(!!image);
+    imageListTemplate.push(accessToSeries.indexOf(i) !== -1);
   }
   return imageListTemplate;
 }
 
+function groupImagesBySeries(images) {
+  let imagesBySeries = {};
+  images.forEach(image => {
+    if (!imagesBySeries[image.series]) imagesBySeries[image.series] = [];
+    imagesBySeries[image.series].push(image);
+  });
+  return imagesBySeries
+}
+
 router.get('/available', function(req, res) {
   const login = req.query.login;
-  function prepearImageListTemplate(user) {
-    if(!user) return Promise.reject(`Не найдень пользователь с ником "${login}"`);    
+  let currentUser;
+  function prepearImageListTemplate(imagesList) {
+    imagesList = groupImagesBySeries(imagesList);
     res.status(200).send({
-      paginationList :makeImagesLinksForPaginationLine(user.recentImages),
-      list: user.recentImages
+      paginationList: makeImagesLinksForPaginationLine(currentUser.accessToSeries),
+      list: imagesList
     });
+  }
+  function getNamaesOfAvaliableImages(user) {
+    if(!user) return Promise.reject(`Не найдень пользователь с ником "${login}"`);
+    currentUser = user;
+    const criteria = {
+      series: {
+        $in: user.accessToSeries
+      }
+    };
+    return ImageModel.find(criteria)
   }
 
   if(!login) return res.status(500).send('Ошибка в никнейме');
 
   UserModel
     .findOne({login})
-    .populate('recentImages')
     .exec()
+    .then(getNamaesOfAvaliableImages)
     .then(prepearImageListTemplate)
     .catch(err => {
       res.status(404).send(err);

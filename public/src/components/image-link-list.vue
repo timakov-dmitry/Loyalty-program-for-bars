@@ -7,6 +7,9 @@
             <li><a @click="changeImage(4)" v-bind:class="{ active: !!imageList[3] }">4</a></li>
             <li><a @click="changeImage(5)" v-bind:class="{ active: !!imageList[4] }">5</a></li>
             <li><a @click="changeImage(6)" v-bind:class="{ active: !!imageList[5] }">6</a></li>
+            <li><a @click="changeImage(7)" v-bind:class="{ active: !!imageList[6] }">7</a></li>
+            <li><a @click="changeImage(8)" v-bind:class="{ active: !!imageList[7] }">8</a></li>
+            <li><a @click="changeImage(9)" v-bind:class="{ active: !!imageList[8] }">9</a></li>
         </ul>
     </div>
 </template>
