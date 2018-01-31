@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 5);
+/******/ 	return __webpack_require__(__webpack_require__.s = 6);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -165,7 +165,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(19)
+var listToStyles = __webpack_require__(20)
 
 /*
 type StyleObject = {
@@ -696,53 +696,67 @@ module.exports = g;
 /* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
+/*!
+ * vue-carousel v0.6.5
+ * (c) 2017 todd.beauchamp@ssense.com
+ * https://github.com/ssense/vue-carousel#readme
+ */
+!function(e,t){ true?module.exports=t():"function"==typeof define&&define.amd?define([],t):"object"==typeof exports?exports.VueCarousel=t():e.VueCarousel=t()}(this,function(){return function(e){function t(a){if(n[a])return n[a].exports;var i=n[a]={exports:{},id:a,loaded:!1};return e[a].call(i.exports,i,i.exports,t),i.loaded=!0,i.exports}var n={};return t.m=e,t.c=n,t.p="",t(0)}([function(e,t,n){"use strict";function a(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0}),t.Slide=t.Carousel=void 0;var i=n(1),r=a(i),o=n(21),s=a(o),u=function(e){e.component("carousel",r.default),e.component("slide",s.default)};t.default={install:u},t.Carousel=r.default,t.Slide=s.default},function(e,t,n){function a(e){n(2)}var i=n(7)(n(8),n(26),a,null,null);e.exports=i.exports},function(e,t,n){var a=n(3);"string"==typeof a&&(a=[[e.id,a,""]]),a.locals&&(e.exports=a.locals);n(5)("70056466",a,!0)},function(e,t,n){t=e.exports=n(4)(),t.push([e.id,".VueCarousel{position:relative}.VueCarousel-wrapper{width:100%;position:relative;overflow:hidden}.VueCarousel-inner{display:flex;flex-direction:row;backface-visibility:hidden}",""])},function(e,t){e.exports=function(){var e=[];return e.toString=function(){for(var e=[],t=0;t<this.length;t++){var n=this[t];n[2]?e.push("@media "+n[2]+"{"+n[1]+"}"):e.push(n[1])}return e.join("")},e.i=function(t,n){"string"==typeof t&&(t=[[null,t,""]]);for(var a={},i=0;i<this.length;i++){var r=this[i][0];"number"==typeof r&&(a[r]=!0)}for(i=0;i<t.length;i++){var o=t[i];"number"==typeof o[0]&&a[o[0]]||(n&&!o[2]?o[2]=n:n&&(o[2]="("+o[2]+") and ("+n+")"),e.push(o))}},e}},function(e,t,n){function a(e){for(var t=0;t<e.length;t++){var n=e[t],a=d[n.id];if(a){a.refs++;for(var i=0;i<a.parts.length;i++)a.parts[i](n.parts[i]);for(;i<n.parts.length;i++)a.parts.push(r(n.parts[i]));a.parts.length>n.parts.length&&(a.parts.length=n.parts.length)}else{for(var o=[],i=0;i<n.parts.length;i++)o.push(r(n.parts[i]));d[n.id]={id:n.id,refs:1,parts:o}}}}function i(){var e=document.createElement("style");return e.type="text/css",c.appendChild(e),e}function r(e){var t,n,a=document.querySelector('style[data-vue-ssr-id~="'+e.id+'"]');if(a){if(h)return v;a.parentNode.removeChild(a)}if(g){var r=p++;a=f||(f=i()),t=o.bind(null,a,r,!1),n=o.bind(null,a,r,!0)}else a=i(),t=s.bind(null,a),n=function(){a.parentNode.removeChild(a)};return t(e),function(a){if(a){if(a.css===e.css&&a.media===e.media&&a.sourceMap===e.sourceMap)return;t(e=a)}else n()}}function o(e,t,n,a){var i=n?"":a.css;if(e.styleSheet)e.styleSheet.cssText=m(t,i);else{var r=document.createTextNode(i),o=e.childNodes;o[t]&&e.removeChild(o[t]),o.length?e.insertBefore(r,o[t]):e.appendChild(r)}}function s(e,t){var n=t.css,a=t.media,i=t.sourceMap;if(a&&e.setAttribute("media",a),i&&(n+="\n/*# sourceURL="+i.sources[0]+" */",n+="\n/*# sourceMappingURL=data:application/json;base64,"+btoa(unescape(encodeURIComponent(JSON.stringify(i))))+" */"),e.styleSheet)e.styleSheet.cssText=n;else{for(;e.firstChild;)e.removeChild(e.firstChild);e.appendChild(document.createTextNode(n))}}var u="undefined"!=typeof document,l=n(6),d={},c=u&&(document.head||document.getElementsByTagName("head")[0]),f=null,p=0,h=!1,v=function(){},g="undefined"!=typeof navigator&&/msie [6-9]\b/.test(navigator.userAgent.toLowerCase());e.exports=function(e,t,n){h=n;var i=l(e,t);return a(i),function(t){for(var n=[],r=0;r<i.length;r++){var o=i[r],s=d[o.id];s.refs--,n.push(s)}t?(i=l(e,t),a(i)):i=[];for(var r=0;r<n.length;r++){var s=n[r];if(0===s.refs){for(var u=0;u<s.parts.length;u++)s.parts[u]();delete d[s.id]}}}};var m=function(){var e=[];return function(t,n){return e[t]=n,e.filter(Boolean).join("\n")}}()},function(e,t){e.exports=function(e,t){for(var n=[],a={},i=0;i<t.length;i++){var r=t[i],o=r[0],s=r[1],u=r[2],l=r[3],d={id:e+":"+i,css:s,media:u,sourceMap:l};a[o]?a[o].parts.push(d):n.push(a[o]={id:o,parts:[d]})}return n}},function(e,t){e.exports=function(e,t,n,a,i){var r,o=e=e||{},s=typeof e.default;"object"!==s&&"function"!==s||(r=e,o=e.default);var u="function"==typeof o?o.options:o;t&&(u.render=t.render,u.staticRenderFns=t.staticRenderFns),a&&(u._scopeId=a);var l;if(i?(l=function(e){e=e||this.$vnode&&this.$vnode.ssrContext||this.parent&&this.parent.$vnode&&this.parent.$vnode.ssrContext,e||"undefined"==typeof __VUE_SSR_CONTEXT__||(e=__VUE_SSR_CONTEXT__),n&&n.call(this,e),e&&e._registeredComponents&&e._registeredComponents.add(i)},u._ssrRegister=l):n&&(l=n),l){var d=u.functional,c=d?u.render:u.beforeCreate;d?u.render=function(e,t){return l.call(t),c(e,t)}:u.beforeCreate=c?[].concat(c,l):[l]}return{esModule:r,exports:o,options:u}}},function(e,t,n){"use strict";function a(e){return e&&e.__esModule?e:{default:e}}Object.defineProperty(t,"__esModule",{value:!0});var i=n(9),r=a(i),o=n(10),s=a(o),u=n(11),l=a(u),d=n(16),c=a(d),f=n(21),p=a(f);t.default={name:"carousel",beforeUpdate:function(){this.computeCarouselWidth()},components:{Navigation:l.default,Pagination:c.default,Slide:p.default},data:function(){return{browserWidth:null,carouselWidth:null,currentPage:0,dragOffset:0,dragStartX:0,mousedown:!1,slideCount:0}},mixins:[r.default],props:{easing:{type:String,default:"ease"},minSwipeDistance:{type:Number,default:8},navigationClickTargetSize:{type:Number,default:8},navigationEnabled:{type:Boolean,default:!1},navigationNextLabel:{type:String,default:"▶"},navigationPrevLabel:{type:String,default:"◀"},paginationActiveColor:{type:String,default:"#000000"},paginationColor:{type:String,default:"#efefef"},paginationEnabled:{type:Boolean,default:!0},paginationPadding:{type:Number,default:10},paginationSize:{type:Number,default:10},perPage:{type:Number,default:2},perPageCustom:{type:Array},scrollPerPage:{type:Boolean,default:!1},speed:{type:Number,default:500},loop:{type:Boolean,default:!1}},computed:{breakpointSlidesPerPage:function(){if(!this.perPageCustom)return this.perPage;var e=this.perPageCustom,t=this.browserWidth,n=e.sort(function(e,t){return e[0]>t[0]?-1:1}),a=n.filter(function(e){return t>=e[0]}),i=a[0]&&a[0][1];return i||this.perPage},canAdvanceForward:function(){return this.loop||this.currentPage<this.pageCount-1},canAdvanceBackward:function(){return this.loop||this.currentPage>0},currentPerPage:function(){return!this.perPageCustom||this.$isServer?this.perPage:this.breakpointSlidesPerPage},currentOffset:function(){var e=this.currentPage,t=this.slideWidth,n=this.dragOffset,a=this.scrollPerPage?e*t*this.currentPerPage:e*t;return(a+n)*-1},isHidden:function(){return this.carouselWidth<=0},pageCount:function(){var e=this.slideCount,t=this.currentPerPage;if(this.scrollPerPage){var n=Math.ceil(e/t);return n<1?1:n}return e-(this.currentPerPage-1)},slideWidth:function(){var e=this.carouselWidth,t=this.currentPerPage;return e/t},transitionStyle:function(){return this.speed/1e3+"s "+this.easing+" transform"}},methods:{getNextPage:function(){return this.currentPage<this.pageCount-1?this.currentPage+1:this.loop?0:this.currentPage},getPreviousPage:function(){return this.currentPage>0?this.currentPage-1:this.loop?this.pageCount-1:this.currentPage},advancePage:function(e){e&&"backward"===e&&this.canAdvanceBackward?this.goToPage(this.getPreviousPage()):(!e||e&&"backward"!==e)&&this.canAdvanceForward&&this.goToPage(this.getNextPage())},attachMutationObserver:function(){var e=this,t=window.MutationObserver||window.WebKitMutationObserver||window.MozMutationObserver;if(t){var n={attributes:!0,data:!0};this.mutationObserver=new t(function(){e.$nextTick(function(){e.computeCarouselWidth()})}),this.$parent.$el&&this.mutationObserver.observe(this.$parent.$el,n)}},detachMutationObserver:function(){this.mutationObserver&&this.mutationObserver.disconnect()},getBrowserWidth:function(){return this.browserWidth=window.innerWidth,this.browserWidth},getCarouselWidth:function(){return this.carouselWidth=this.$el&&this.$el.clientWidth||0,this.carouselWidth},getSlideCount:function(){this.slideCount=this.$slots&&this.$slots.default&&this.$slots.default.filter(function(e){return e.tag&&e.tag.indexOf("slide")>-1}).length||0},goToPage:function(e){e>=0&&e<=this.pageCount&&(this.currentPage=e,this.$emit("pageChange",this.currentPage))},handleMousedown:function(e){e.touches||e.preventDefault(),this.mousedown=!0,this.dragStartX="ontouchstart"in window?e.touches[0].clientX:e.clientX},handleMouseup:function(){this.mousedown=!1,this.dragOffset=0},handleMousemove:function(e){if(this.mousedown){var t="ontouchstart"in window?e.touches[0].clientX:e.clientX,n=this.dragStartX-t;this.dragOffset=n,this.dragOffset>this.minSwipeDistance?(this.handleMouseup(),this.advancePage()):this.dragOffset<-this.minSwipeDistance&&(this.handleMouseup(),this.advancePage("backward"))}},computeCarouselWidth:function(){this.getSlideCount(),this.getBrowserWidth(),this.getCarouselWidth(),this.setCurrentPageInBounds()},setCurrentPageInBounds:function(){if(!this.canAdvanceForward){var e=this.pageCount-1;this.currentPage=e>=0?e:0}}},mounted:function(){this.$isServer||(window.addEventListener("resize",(0,s.default)(this.computeCarouselWidth,16)),"ontouchstart"in window?(this.$el.addEventListener("touchstart",this.handleMousedown),this.$el.addEventListener("touchend",this.handleMouseup),this.$el.addEventListener("touchmove",this.handleMousemove)):(this.$el.addEventListener("mousedown",this.handleMousedown),this.$el.addEventListener("mouseup",this.handleMouseup),this.$el.addEventListener("mousemove",this.handleMousemove))),this.attachMutationObserver(),this.computeCarouselWidth()},destroyed:function(){this.$isServer||(this.detachMutationObserver(),window.removeEventListener("resize",this.getBrowserWidth),"ontouchstart"in window?this.$el.removeEventListener("touchmove",this.handleMousemove):this.$el.removeEventListener("mousemove",this.handleMousemove))}}},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n={props:{autoplay:{type:Boolean,default:!1},autoplayTimeout:{type:Number,default:2e3},autoplayHoverPause:{type:Boolean,default:!0}},data:function(){return{autoplayInterval:null}},destroyed:function(){this.$isServer||(this.$el.removeEventListener("mouseenter",this.pauseAutoplay),this.$el.removeEventListener("mouseleave",this.startAutoplay))},methods:{pauseAutoplay:function(){this.autoplayInterval&&(this.autoplayInterval=clearInterval(this.autoplayInterval))},startAutoplay:function(){this.autoplay&&(this.autoplayInterval=setInterval(this.advancePage,this.autoplayTimeout))}},mounted:function(){!this.$isServer&&this.autoplayHoverPause&&(this.$el.addEventListener("mouseenter",this.pauseAutoplay),this.$el.addEventListener("mouseleave",this.startAutoplay)),this.startAutoplay()}};t.default=n},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var n=function(e,t,n){var a=void 0;return function(){var i=void 0,r=function(){a=null,n||e.apply(i)},o=n&&!a;clearTimeout(a),a=setTimeout(r,t),o&&e.apply(i)}};t.default=n},function(e,t,n){function a(e){n(12)}var i=n(7)(n(14),n(15),a,"data-v-7fed18e9",null);e.exports=i.exports},function(e,t,n){var a=n(13);"string"==typeof a&&(a=[[e.id,a,""]]),a.locals&&(e.exports=a.locals);n(5)("58a44a73",a,!0)},function(e,t,n){t=e.exports=n(4)(),t.push([e.id,".VueCarousel-navigation-button[data-v-7fed18e9]{position:absolute;top:50%;box-sizing:border-box;color:#000;text-decoration:none}.VueCarousel-navigation-next[data-v-7fed18e9]{right:0;transform:translateY(-50%) translateX(100%)}.VueCarousel-navigation-prev[data-v-7fed18e9]{left:0;transform:translateY(-50%) translateX(-100%)}.VueCarousel-navigation--disabled[data-v-7fed18e9]{opacity:.5;cursor:default}",""])},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={name:"navigation",data:function(){return{parentContainer:this.$parent}},props:{clickTargetSize:{type:Number,default:8},nextLabel:{type:String,default:"▶"},prevLabel:{type:String,default:"◀"}},computed:{canAdvanceForward:function(){return this.parentContainer.canAdvanceForward||!1},canAdvanceBackward:function(){return this.parentContainer.canAdvanceBackward||!1}},methods:{triggerPageAdvance:function(e){e?this.$parent.advancePage(e):this.$parent.advancePage()}}}},function(e,t){e.exports={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"VueCarousel-navigation"},[n("a",{staticClass:"VueCarousel-navigation-button VueCarousel-navigation-prev",class:{"VueCarousel-navigation--disabled":!e.canAdvanceBackward},style:"padding: "+e.clickTargetSize+"px; margin-right: -"+e.clickTargetSize+"px;",attrs:{href:"#"},domProps:{innerHTML:e._s(e.prevLabel)},on:{click:function(t){t.preventDefault(),e.triggerPageAdvance("backward")}}}),e._v(" "),n("a",{staticClass:"VueCarousel-navigation-button VueCarousel-navigation-next",class:{"VueCarousel-navigation--disabled":!e.canAdvanceForward},style:"padding: "+e.clickTargetSize+"px; margin-left: -"+e.clickTargetSize+"px;",attrs:{href:"#"},domProps:{innerHTML:e._s(e.nextLabel)},on:{click:function(t){t.preventDefault(),e.triggerPageAdvance()}}})])},staticRenderFns:[]}},function(e,t,n){function a(e){n(17)}var i=n(7)(n(19),n(20),a,"data-v-7e42136f",null);e.exports=i.exports},function(e,t,n){var a=n(18);"string"==typeof a&&(a=[[e.id,a,""]]),a.locals&&(e.exports=a.locals);n(5)("cc30be7c",a,!0)},function(e,t,n){t=e.exports=n(4)(),t.push([e.id,".VueCarousel-pagination[data-v-7e42136f]{width:100%;float:left;text-align:center}.VueCarousel-dot-container[data-v-7e42136f]{display:inline-block;margin:0 auto}.VueCarousel-dot[data-v-7e42136f]{float:left;cursor:pointer}.VueCarousel-dot-inner[data-v-7e42136f]{border-radius:100%}",""])},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={name:"pagination",data:function(){return{parentContainer:this.$parent}}}},function(e,t){e.exports={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{directives:[{name:"show",rawName:"v-show",value:e.parentContainer.pageCount>1,expression:"parentContainer.pageCount > 1"}],staticClass:"VueCarousel-pagination"},[n("div",{staticClass:"VueCarousel-dot-container"},e._l(e.parentContainer.pageCount,function(t,a){return n("div",{staticClass:"VueCarousel-dot",class:{"VueCarousel-dot--active":a===e.parentContainer.currentPage},style:"\n        margin-top: "+2*e.parentContainer.paginationPadding+"px;\n        padding: "+e.parentContainer.paginationPadding+"px;\n      ",on:{click:function(t){e.parentContainer.goToPage(a)}}},[n("div",{staticClass:"VueCarousel-dot-inner",style:"\n          width: "+e.parentContainer.paginationSize+"px;\n          height: "+e.parentContainer.paginationSize+"px;\n          background: "+(a===e.parentContainer.currentPage?e.parentContainer.paginationActiveColor:e.parentContainer.paginationColor)+";\n        "})])}))])},staticRenderFns:[]}},function(e,t,n){function a(e){n(22)}var i=n(7)(n(24),n(25),a,null,null);e.exports=i.exports},function(e,t,n){var a=n(23);"string"==typeof a&&(a=[[e.id,a,""]]),a.locals&&(e.exports=a.locals);n(5)("647f10ac",a,!0)},function(e,t,n){t=e.exports=n(4)(),t.push([e.id,".VueCarousel-slide{flex-basis:inherit;flex-grow:0;flex-shrink:0;user-select:none}",""])},function(e,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.default={name:"slide",data:function(){return{width:null}}}},function(e,t){e.exports={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"VueCarousel-slide"},[e._t("default")],2)},staticRenderFns:[]}},function(e,t){e.exports={render:function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("div",{staticClass:"VueCarousel"},[n("div",{staticClass:"VueCarousel-wrapper"},[n("div",{staticClass:"VueCarousel-inner",style:"\n        transform: translateX("+e.currentOffset+"px);\n        transition: "+e.transitionStyle+";\n        flex-basis: "+e.slideWidth+"px;\n        visibility: "+(e.slideWidth?"visible":"hidden")+"\n      "},[e._t("default")],2)]),e._v(" "),e.paginationEnabled&&e.pageCount>0?n("pagination"):e._e(),e._v(" "),e.navigationEnabled?n("navigation",{attrs:{clickTargetSize:e.navigationClickTargetSize,nextLabel:e.navigationNextLabel,prevLabel:e.navigationPrevLabel}}):e._e()],1)},staticRenderFns:[]}}])});
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
 "use strict";
 
 
-__webpack_require__(6);
-
 __webpack_require__(7);
 
-var _vue = __webpack_require__(10);
+__webpack_require__(8);
+
+var _vue = __webpack_require__(11);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _vueCookie = __webpack_require__(13);
+var _vueCookie = __webpack_require__(14);
 
 var _vueCookie2 = _interopRequireDefault(_vueCookie);
 
-var _vueRouter = __webpack_require__(15);
+var _vueRouter = __webpack_require__(16);
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-var _newUserForm = __webpack_require__(16);
+var _vueCarousel = __webpack_require__(5);
+
+var _vueCarousel2 = _interopRequireDefault(_vueCarousel);
+
+var _newUserForm = __webpack_require__(17);
 
 var _newUserForm2 = _interopRequireDefault(_newUserForm);
 
-var _existUserForm = __webpack_require__(22);
+var _existUserForm = __webpack_require__(23);
 
 var _existUserForm2 = _interopRequireDefault(_existUserForm);
 
-var _images = __webpack_require__(27);
+var _images = __webpack_require__(28);
 
 var _images2 = _interopRequireDefault(_images);
 
-var _askForm = __webpack_require__(42);
+var _askForm = __webpack_require__(43);
 
 var _askForm2 = _interopRequireDefault(_askForm);
 
-var _carousel = __webpack_require__(53);
+var _vuecarousel = __webpack_require__(48);
 
-var _carousel2 = _interopRequireDefault(_carousel);
+var _vuecarousel2 = _interopRequireDefault(_vuecarousel);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-_vue2.default.use(_vueCookie2.default);
-
 //vue
 //libs
-
+_vue2.default.use(_vueCookie2.default);
 _vue2.default.use(_vueRouter2.default);
+_vue2.default.use(_vueCarousel2.default);
 
 //components
 
@@ -750,7 +764,7 @@ _vue2.default.use(_vueRouter2.default);
 _vue2.default.component('new-user-form', _newUserForm2.default);
 _vue2.default.component('exist-user-form', _existUserForm2.default);
 _vue2.default.component('images', _images2.default);
-_vue2.default.component('carousel', _carousel2.default);
+_vue2.default.component('vuecarousel', _vuecarousel2.default);
 
 var routes = [{ path: '/new-user', component: _newUserForm2.default }, { path: '/exist-user', component: _existUserForm2.default }, { path: '/images', component: _images2.default }, { path: '/', component: _askForm2.default }];
 var router = new _vueRouter2.default({ routes: routes });
@@ -764,7 +778,7 @@ var app = new _vue2.default({
 }).$mount('#app');
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -893,7 +907,7 @@ window.onload = onLoad;
 window.onresize = onResize;
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2763,7 +2777,7 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
       return 1 === arguments.length ? this.off(a, "**") : this.off(b, a || "**", c);
     } }), r.holdReady = function (a) {
     a ? r.readyWait++ : r.ready(!0);
-  }, r.isArray = Array.isArray, r.parseJSON = JSON.parse, r.nodeName = B, "function" == "function" && __webpack_require__(9) && !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
+  }, r.isArray = Array.isArray, r.parseJSON = JSON.parse, r.nodeName = B, "function" == "function" && __webpack_require__(10) && !(__WEBPACK_AMD_DEFINE_ARRAY__ = [], __WEBPACK_AMD_DEFINE_RESULT__ = function () {
     return r;
   }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
 				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));var mb = a.jQuery,
@@ -2771,10 +2785,10 @@ var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol
     return a.$ === r && (a.$ = nb), b && a.jQuery === r && (a.jQuery = mb), r;
   }, b || (a.jQuery = a.$ = r), r;
 });
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(8)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9)(module)))
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -2802,7 +2816,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 /* WEBPACK VAR INJECTION */(function(__webpack_amd_options__) {/* globals __webpack_amd_options__ */
@@ -2811,7 +2825,7 @@ module.exports = __webpack_amd_options__;
 /* WEBPACK VAR INJECTION */}.call(exports, {}))
 
 /***/ }),
-/* 10 */
+/* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -13376,10 +13390,10 @@ Vue$3.compile = compileToFunctions;
 
 /* harmony default export */ __webpack_exports__["default"] = (Vue$3);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3), __webpack_require__(4), __webpack_require__(11).setImmediate))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3), __webpack_require__(4), __webpack_require__(12).setImmediate))
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -13432,13 +13446,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(12);
+__webpack_require__(13);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -13631,7 +13645,7 @@ exports.clearImmediate = clearImmediate;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(4), __webpack_require__(3)))
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 (function () {
@@ -13640,7 +13654,7 @@ exports.clearImmediate = clearImmediate;
             isFinite(value) &&
             Math.floor(value) === value;
     };
-    var Cookie = __webpack_require__(14);
+    var Cookie = __webpack_require__(15);
 
     var VueCookie = {
 
@@ -13682,7 +13696,7 @@ exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
@@ -13844,7 +13858,7 @@ var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
 
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16476,17 +16490,17 @@ if (inBrowser && window.Vue) {
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(3)))
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_new_user_form_vue__ = __webpack_require__(20);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0994dc40_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_new_user_form_vue__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_new_user_form_vue__ = __webpack_require__(21);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0994dc40_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_new_user_form_vue__ = __webpack_require__(22);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(17)
+  __webpack_require__(18)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -16532,13 +16546,13 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(18);
+var content = __webpack_require__(19);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -16558,7 +16572,7 @@ if(false) {
 }
 
 /***/ }),
-/* 18 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -16572,7 +16586,7 @@ exports.push([module.i, "\n.pull-left[data-v-0994dc40] {\n    text-align: left;\
 
 
 /***/ }),
-/* 19 */
+/* 20 */
 /***/ (function(module, exports) {
 
 /**
@@ -16605,7 +16619,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 20 */
+/* 21 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16652,10 +16666,9 @@ module.exports = function listToStyles (parentId, list) {
       const imageCode = this.$cookie.get('new-image');
       const tryToAddImageToUser = () => {
         this.$cookie.set('login', this.login, 365);
-        return imageCode ? axios.post('/images/add-new', { imageCode, login: this.login }) : Promise.resolve('Нет нового фото');
+        return imageCode ? axios.post('/images/add-new-image', { imageSeriesCode: imageCode, login: this.login }) : Promise.resolve('Нет нового фото');
       };
       const goToImagesPage = image => {
-        this.$cookie.set('last-image-index', image.index, 3);
         this.$cookie.delete('new-image');
         this.$router.push('images');
       };
@@ -16670,7 +16683,7 @@ module.exports = function listToStyles (parentId, list) {
 });
 
 /***/ }),
-/* 21 */
+/* 22 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16748,17 +16761,17 @@ if (false) {
 }
 
 /***/ }),
-/* 22 */
+/* 23 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_exist_user_form_vue__ = __webpack_require__(25);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_361c1197_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_exist_user_form_vue__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_exist_user_form_vue__ = __webpack_require__(26);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_361c1197_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_exist_user_form_vue__ = __webpack_require__(27);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(23)
+  __webpack_require__(24)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -16804,13 +16817,13 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(24);
+var content = __webpack_require__(25);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -16830,7 +16843,7 @@ if(false) {
 }
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -16844,7 +16857,7 @@ exports.push([module.i, "\n.pull-left[data-v-361c1197] {\n    text-align: left;\
 
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16888,10 +16901,9 @@ exports.push([module.i, "\n.pull-left[data-v-361c1197] {\n    text-align: left;\
       const imageCode = this.$cookie.get('new-image');
       const tryToAddImageToUser = () => {
         this.$cookie.set('login', this.login, 365);
-        return imageCode ? axios.post('/images/add-new', { imageCode, login: this.login }) : Promise.resolve('Нет нового фото');
+        return imageCode ? axios.post('/images/add-new-image', { imageSeriesCode: imageCode, login: this.login }) : Promise.resolve('Нет нового фото');
       };
       const goToImagesPage = image => {
-        this.$cookie.set('last-image-index', image.index, 3);
         this.$cookie.delete('new-image');
         this.$router.push('images');
       };
@@ -16914,7 +16926,7 @@ exports.push([module.i, "\n.pull-left[data-v-361c1197] {\n    text-align: left;\
 });
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16992,17 +17004,17 @@ if (false) {
 }
 
 /***/ }),
-/* 27 */
+/* 28 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_images_vue__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_466c7b61_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_images_vue__ = __webpack_require__(41);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_images_vue__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_466c7b61_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_images_vue__ = __webpack_require__(42);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(28)
+  __webpack_require__(29)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -17048,13 +17060,13 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 28 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(29);
+var content = __webpack_require__(30);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -17074,7 +17086,7 @@ if(false) {
 }
 
 /***/ }),
-/* 29 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -17088,18 +17100,12 @@ exports.push([module.i, "\n.menu[data-v-466c7b61] {\n  color: azure;\n}\n.center
 
 
 /***/ }),
-/* 30 */
+/* 31 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__image_container_vue__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__image_link_list_vue__ = __webpack_require__(36);
-//
-//
-//
-//
-//
-//
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__image_container_vue__ = __webpack_require__(32);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__image_link_list_vue__ = __webpack_require__(37);
 //
 //
 //
@@ -17116,41 +17122,41 @@ exports.push([module.i, "\n.menu[data-v-466c7b61] {\n  color: azure;\n}\n.center
   data() {
     return {
       imagesAvailable: {},
-      currentImage: {}
+      currentPage: null,
+      imagesSeq: []
     };
   },
-  components: {
-    ImageContainer: __WEBPACK_IMPORTED_MODULE_0__image_container_vue__["a" /* default */],
-    ImageLinkList: __WEBPACK_IMPORTED_MODULE_1__image_link_list_vue__["a" /* default */]
-  },
+  components: { ImageContainer: __WEBPACK_IMPORTED_MODULE_0__image_container_vue__["a" /* default */], ImageLinkList: __WEBPACK_IMPORTED_MODULE_1__image_link_list_vue__["a" /* default */] },
   methods: {
-    changeCurentImage(index) {
-      this.currentImage = this.imagesAvailable.list.find(image => image.index == index);
+    changeCurrentImage(index) {
+      this.currentPage = index;
+      if (!!this.imagesAvailable.list[this.currentPage]) {
+        this.imagesSeq = this.imagesAvailable.list[this.currentPage].map(image => `/comix/${image.name}`);
+      }
     }
   },
   created: function () {
     axios.get(`/images/available?login=${this.$cookie.get("login")}`).then(({ data }) => {
       this.imagesAvailable = data;
-      this.currentImage = data.list[0];
-    }).catch(error => {
-      this.errorText = error.response.data;
-      this.isShowError = true;
-      console.error(error);
-    });
+      this.currentPage = data.defaultPage;
+      if (data && data.list[this.currentPage] && data.list[this.currentPage].length) {
+        this.imagesSeq = data.list[this.currentPage].map(image => `/comix/${image.name}`);
+      }
+    }).catch(console.error(error));
   }
 });
 
 /***/ }),
-/* 31 */
+/* 32 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_image_container_vue__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2c488314_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_image_container_vue__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_image_container_vue__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2c488314_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_image_container_vue__ = __webpack_require__(36);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(32)
+  __webpack_require__(33)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -17196,13 +17202,13 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 32 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(33);
+var content = __webpack_require__(34);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -17222,7 +17228,7 @@ if(false) {
 }
 
 /***/ }),
-/* 33 */
+/* 34 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -17236,7 +17242,7 @@ exports.push([module.i, "\nimg {\n  width: 90%;\n}\n", ""]);
 
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17270,7 +17276,7 @@ exports.push([module.i, "\nimg {\n  width: 90%;\n}\n", ""]);
 });
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17292,16 +17298,16 @@ if (false) {
 }
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_image_link_list_vue__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9e140ef4_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_image_link_list_vue__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_image_link_list_vue__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_9e140ef4_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_image_link_list_vue__ = __webpack_require__(41);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(37)
+  __webpack_require__(38)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -17347,13 +17353,13 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(38);
+var content = __webpack_require__(39);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -17373,7 +17379,7 @@ if(false) {
 }
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -17381,13 +17387,13 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\nul {\n    min-width: 410px;\n}\n.pagination {\n    list-style: none;\n    display: inline-block;\n    padding: 0;\n    margin-top: 10px;\n}\n.pagination li {\n    display: inline;\n    text-align: center;\n}\n.pagination a {\n    float: left;\n    display: block;\n    font-size: 14px;\n    text-decoration: none;\n    padding: 5px 12px;\n    color: #fff;\n    margin-left: -1px;\n    border: 1px solid transparent;\n    line-height: 1.5;\n    cursor: default;\n}\n.pagination a.active {\n    cursor: pointer\n}\n.pagination a:active {\n    outline: none;\n}\n.modal-5 {\n    position: relative;\n}\n.modal-5:after {\n    content: '';\n    position: absolute;\n    width: 100%;\n    height: 35px;\n    left: 0;\n    bottom: 0;\n    z-index: -1;\n    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC42NSIvPjxzdG9wIG9mZnNldD0iNjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuNjUiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');\n    background-size: 100%;\n    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(40%, rgba(0, 0, 0, 0.65)), color-stop(50%, rgba(0, 0, 0, 0.65)), color-stop(60%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 0)));\n    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 40%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0) 100%);\n    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 40%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0) 100%);\n    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 40%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0) 100%);\n}\n.modal-5 a {\n    color: #666;\n    padding: 13px 5px 5px;\n    margin: 0 10px;\n    position: relative;\n}\n.modal-5 a:hover {\n    color: #fff;\n}\n.modal-5 a:hover:after {\n    content: '';\n    position: absolute;\n    width: 24px;\n    height: 24px;\n    background: #1E7EE2;\n    -moz-border-radius: 100%;\n    -webkit-border-radius: 100%;\n    border-radius: 100%;\n    z-index: -1;\n    left: -3px;\n    bottom: 4px;\n    margin: auto;\n}\n.modal-5 a.next, .modal-5 a.prev {\n    color: #1E7EE2;\n}\n.modal-5 a.next:hover, .modal-5 a.prev:hover {\n    color: #fff;\n}\n.modal-5 a.next:hover:after, .modal-5 a.prev:hover:after {\n    display: none;\n}\n.modal-5 a.active {\n    background: #1E7EE2;\n    color: #fff;\n}\n.modal-5 a.active:before {\n    content: '';\n    position: absolute;\n    top: -11px;\n    left: -10px;\n    width: 18px;\n    border: 10px solid transparent;\n    border-bottom: 7px solid #104477;\n    z-index: -1;\n}\n.modal-5 a.active:hover:after {\n    display: none;\n}\n", ""]);
+exports.push([module.i, "\nul {\n    min-width: 230px;\n}\n.pagination {\n    list-style: none;\n    display: inline-block;\n    padding: 0;\n    margin-top: 10px;\n}\n.pagination li {\n    display: inline;\n    text-align: center;\n}\n.pagination a {\n    float: left;\n    display: block;\n    font-size: 14px;\n    text-decoration: none;\n    padding: 5px 12px;\n    color: #fff;\n    margin-left: -1px;\n    border: 1px solid transparent;\n    line-height: 1.5;\n    cursor: default;\n}\n.pagination a.active {\n    cursor: pointer\n}\n.pagination a:active {\n    outline: none;\n}\n.modal-5 {\n    position: relative;\n}\n.modal-5:after {\n    content: '';\n    position: absolute;\n    width: 100%;\n    height: 35px;\n    left: 0;\n    bottom: 0;\n    z-index: -1;\n    background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjAiLz48c3RvcCBvZmZzZXQ9IjQwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIgc3RvcC1vcGFjaXR5PSIwLjY1Ii8+PHN0b3Agb2Zmc2V0PSI1MCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC42NSIvPjxzdG9wIG9mZnNldD0iNjAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIiBzdG9wLW9wYWNpdHk9IjAuNjUiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwMDAwMDAiIHN0b3Atb3BhY2l0eT0iMC4wIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');\n    background-size: 100%;\n    background-image: -webkit-gradient(linear, 0% 50%, 100% 50%, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(40%, rgba(0, 0, 0, 0.65)), color-stop(50%, rgba(0, 0, 0, 0.65)), color-stop(60%, rgba(0, 0, 0, 0.65)), color-stop(100%, rgba(0, 0, 0, 0)));\n    background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 40%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0) 100%);\n    background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 40%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0) 100%);\n    background-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.65) 40%, rgba(0, 0, 0, 0.65) 50%, rgba(0, 0, 0, 0.65) 60%, rgba(0, 0, 0, 0) 100%);\n}\n.modal-5 a {\n    color: #666;\n    padding: 13px 5px 5px;\n    margin: 0 10px;\n    position: relative;\n}\n.modal-5 a:hover {\n    color: #fff;\n}\n.modal-5 a:hover:after {\n    content: '';\n    position: absolute;\n    width: 24px;\n    height: 24px;\n    background: #1E7EE2;\n    -moz-border-radius: 100%;\n    -webkit-border-radius: 100%;\n    border-radius: 100%;\n    z-index: -1;\n    left: -3px;\n    bottom: 4px;\n    margin: auto;\n}\n.modal-5 a.next, .modal-5 a.prev {\n    color: #1E7EE2;\n}\n.modal-5 a.next:hover, .modal-5 a.prev:hover {\n    color: #fff;\n}\n.modal-5 a.next:hover:after, .modal-5 a.prev:hover:after {\n    display: none;\n}\n.modal-5 a.active {\n    background: #1E7EE2;\n    color: #fff;\n}\n.modal-5 a.active:before {\n    content: '';\n    position: absolute;\n    top: -11px;\n    left: -10px;\n    width: 18px;\n    border: 10px solid transparent;\n    border-bottom: 7px solid #104477;\n    z-index: -1;\n}\n.modal-5 a.active:hover:after {\n    display: none;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17399,23 +17405,10 @@ exports.push([module.i, "\nul {\n    min-width: 410px;\n}\n.pagination {\n    li
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
+
 
 /* harmony default export */ __webpack_exports__["a"] = ({
-    data() {
-        return {
-            isAvailable: [true]
-        };
-    },
     props: ['imageList'],
-    name: 'ImageLinkList',
     methods: {
         changeImage(index) {
             this.$emit('changeimage', index);
@@ -17424,7 +17417,7 @@ exports.push([module.i, "\nul {\n    min-width: 410px;\n}\n.pagination {\n    li
 });
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17432,144 +17425,26 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("ul", { staticClass: "pagination modal-5" }, [
-      _c("li", [
+  return _c(
+    "ul",
+    { staticClass: "pagination modal-5" },
+    _vm._l(_vm.imageList, function(image, index) {
+      return _c("li", [
         _c(
           "a",
           {
-            class: { active: !!_vm.imageList[0] },
+            class: { active: !!_vm.imageList[index] },
             on: {
               click: function($event) {
-                _vm.changeImage(1)
+                _vm.changeImage(index + 1)
               }
             }
           },
-          [_vm._v("1")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            class: { active: !!_vm.imageList[1] },
-            on: {
-              click: function($event) {
-                _vm.changeImage(2)
-              }
-            }
-          },
-          [_vm._v("2")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            class: { active: !!_vm.imageList[2] },
-            on: {
-              click: function($event) {
-                _vm.changeImage(3)
-              }
-            }
-          },
-          [_vm._v("3")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            class: { active: !!_vm.imageList[3] },
-            on: {
-              click: function($event) {
-                _vm.changeImage(4)
-              }
-            }
-          },
-          [_vm._v("4")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            class: { active: !!_vm.imageList[4] },
-            on: {
-              click: function($event) {
-                _vm.changeImage(5)
-              }
-            }
-          },
-          [_vm._v("5")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            class: { active: !!_vm.imageList[5] },
-            on: {
-              click: function($event) {
-                _vm.changeImage(6)
-              }
-            }
-          },
-          [_vm._v("6")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            class: { active: !!_vm.imageList[6] },
-            on: {
-              click: function($event) {
-                _vm.changeImage(7)
-              }
-            }
-          },
-          [_vm._v("7")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            class: { active: !!_vm.imageList[7] },
-            on: {
-              click: function($event) {
-                _vm.changeImage(8)
-              }
-            }
-          },
-          [_vm._v("8")]
-        )
-      ]),
-      _vm._v(" "),
-      _c("li", [
-        _c(
-          "a",
-          {
-            class: { active: !!_vm.imageList[8] },
-            on: {
-              click: function($event) {
-                _vm.changeImage(9)
-              }
-            }
-          },
-          [_vm._v("9")]
+          [_vm._v(_vm._s(index + 1))]
         )
       ])
-    ])
-  ])
+    })
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -17583,7 +17458,7 @@ if (false) {
 }
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17591,36 +17466,27 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c(
-      "div",
-      { staticClass: "center-of-sreen" },
-      [
-        _c("p", [_vm._v("Краткая история моих выпиваний")]),
-        _vm._v(" "),
-        _c("image-link-list", {
-          attrs: {
-            "image-list": _vm.imagesAvailable.paginationList
-              ? _vm.imagesAvailable.paginationList
-              : [0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
-          },
-          on: { changeimage: _vm.changeCurentImage }
-        }),
-        _vm._v(" "),
-        _c("image-container", {
-          attrs: {
-            image:
-              _vm.imagesAvailable.list && _vm.imagesAvailable.list.length
-                ? _vm.currentImage
-                : ""
-          }
-        }),
-        _vm._v(" "),
-        _c("carousel")
-      ],
-      1
-    )
-  ])
+  return _c(
+    "div",
+    { staticClass: "center-of-sreen" },
+    [
+      _c("p", [_vm._v("Открытые страницы комиксов")]),
+      _vm._v(" "),
+      _c("image-link-list", {
+        attrs: { "image-list": _vm.imagesAvailable.paginationList },
+        on: { changeimage: _vm.changeCurrentImage }
+      }),
+      _vm._v(" "),
+      _c("vuecarousel", { attrs: { images: _vm.imagesSeq } }),
+      _vm._v(" "),
+      !_vm.currentPage
+        ? _c("img", {
+            attrs: { src: "/comix/404image.jpg", alt: "not open images" }
+          })
+        : _vm._e()
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -17634,17 +17500,17 @@ if (false) {
 }
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_ask_form_vue__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_cfcb1f7e_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_ask_form_vue__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_ask_form_vue__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_cfcb1f7e_hasScoped_true_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_ask_form_vue__ = __webpack_require__(47);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(43)
+  __webpack_require__(44)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -17690,13 +17556,13 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(44);
+var content = __webpack_require__(45);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
@@ -17716,7 +17582,7 @@ if(false) {
 }
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -17730,7 +17596,7 @@ exports.push([module.i, "\nsection.input-form[data-v-cfcb1f7e] {\n    height: 25
 
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17763,7 +17629,7 @@ exports.push([module.i, "\nsection.input-form[data-v-cfcb1f7e] {\n    height: 25
 });
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17811,1885 +17677,17 @@ if (false) {
 }
 
 /***/ }),
-/* 47 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
- * Fizzy UI utils v2.0.5
- * MIT license
- */
-
-/*jshint browser: true, undef: true, unused: true, strict: true */
-
-( function( window, factory ) {
-  // universal module definition
-  /*jshint strict: false */ /*globals define, module, require */
-
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(60)
-    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( matchesSelector ) {
-      return factory( window, matchesSelector );
-    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('desandro-matches-selector')
-    );
-  } else {
-    // browser global
-    window.fizzyUIUtils = factory(
-      window,
-      window.matchesSelector
-    );
-  }
-
-}( window, function factory( window, matchesSelector ) {
-
-'use strict';
-
-var utils = {};
-
-// ----- extend ----- //
-
-// extends objects
-utils.extend = function( a, b ) {
-  for ( var prop in b ) {
-    a[ prop ] = b[ prop ];
-  }
-  return a;
-};
-
-// ----- modulo ----- //
-
-utils.modulo = function( num, div ) {
-  return ( ( num % div ) + div ) % div;
-};
-
-// ----- makeArray ----- //
-
-// turn element or nodeList into an array
-utils.makeArray = function( obj ) {
-  var ary = [];
-  if ( Array.isArray( obj ) ) {
-    // use object if already an array
-    ary = obj;
-  } else if ( obj && typeof obj == 'object' &&
-    typeof obj.length == 'number' ) {
-    // convert nodeList to array
-    for ( var i=0; i < obj.length; i++ ) {
-      ary.push( obj[i] );
-    }
-  } else {
-    // array of single index
-    ary.push( obj );
-  }
-  return ary;
-};
-
-// ----- removeFrom ----- //
-
-utils.removeFrom = function( ary, obj ) {
-  var index = ary.indexOf( obj );
-  if ( index != -1 ) {
-    ary.splice( index, 1 );
-  }
-};
-
-// ----- getParent ----- //
-
-utils.getParent = function( elem, selector ) {
-  while ( elem.parentNode && elem != document.body ) {
-    elem = elem.parentNode;
-    if ( matchesSelector( elem, selector ) ) {
-      return elem;
-    }
-  }
-};
-
-// ----- getQueryElement ----- //
-
-// use element as selector string
-utils.getQueryElement = function( elem ) {
-  if ( typeof elem == 'string' ) {
-    return document.querySelector( elem );
-  }
-  return elem;
-};
-
-// ----- handleEvent ----- //
-
-// enable .ontype to trigger from .addEventListener( elem, 'type' )
-utils.handleEvent = function( event ) {
-  var method = 'on' + event.type;
-  if ( this[ method ] ) {
-    this[ method ]( event );
-  }
-};
-
-// ----- filterFindElements ----- //
-
-utils.filterFindElements = function( elems, selector ) {
-  // make array of elems
-  elems = utils.makeArray( elems );
-  var ffElems = [];
-
-  elems.forEach( function( elem ) {
-    // check that elem is an actual element
-    if ( !( elem instanceof HTMLElement ) ) {
-      return;
-    }
-    // add elem if no selector
-    if ( !selector ) {
-      ffElems.push( elem );
-      return;
-    }
-    // filter & find items if we have a selector
-    // filter
-    if ( matchesSelector( elem, selector ) ) {
-      ffElems.push( elem );
-    }
-    // find children
-    var childElems = elem.querySelectorAll( selector );
-    // concat childElems to filterFound array
-    for ( var i=0; i < childElems.length; i++ ) {
-      ffElems.push( childElems[i] );
-    }
-  });
-
-  return ffElems;
-};
-
-// ----- debounceMethod ----- //
-
-utils.debounceMethod = function( _class, methodName, threshold ) {
-  // original method
-  var method = _class.prototype[ methodName ];
-  var timeoutName = methodName + 'Timeout';
-
-  _class.prototype[ methodName ] = function() {
-    var timeout = this[ timeoutName ];
-    if ( timeout ) {
-      clearTimeout( timeout );
-    }
-    var args = arguments;
-
-    var _this = this;
-    this[ timeoutName ] = setTimeout( function() {
-      method.apply( _this, args );
-      delete _this[ timeoutName ];
-    }, threshold || 100 );
-  };
-};
-
-// ----- docReady ----- //
-
-utils.docReady = function( callback ) {
-  var readyState = document.readyState;
-  if ( readyState == 'complete' || readyState == 'interactive' ) {
-    // do async to allow for other scripts to run. metafizzy/flickity#441
-    setTimeout( callback );
-  } else {
-    document.addEventListener( 'DOMContentLoaded', callback );
-  }
-};
-
-// ----- htmlInit ----- //
-
-// http://jamesroberts.name/blog/2010/02/22/string-functions-for-javascript-trim-to-camel-case-to-dashed-and-to-underscore/
-utils.toDashed = function( str ) {
-  return str.replace( /(.)([A-Z])/g, function( match, $1, $2 ) {
-    return $1 + '-' + $2;
-  }).toLowerCase();
-};
-
-var console = window.console;
-/**
- * allow user to initialize classes via [data-namespace] or .js-namespace class
- * htmlInit( Widget, 'widgetName' )
- * options are parsed from data-namespace-options
- */
-utils.htmlInit = function( WidgetClass, namespace ) {
-  utils.docReady( function() {
-    var dashedNamespace = utils.toDashed( namespace );
-    var dataAttr = 'data-' + dashedNamespace;
-    var dataAttrElems = document.querySelectorAll( '[' + dataAttr + ']' );
-    var jsDashElems = document.querySelectorAll( '.js-' + dashedNamespace );
-    var elems = utils.makeArray( dataAttrElems )
-      .concat( utils.makeArray( jsDashElems ) );
-    var dataOptionsAttr = dataAttr + '-options';
-    var jQuery = window.jQuery;
-
-    elems.forEach( function( elem ) {
-      var attr = elem.getAttribute( dataAttr ) ||
-        elem.getAttribute( dataOptionsAttr );
-      var options;
-      try {
-        options = attr && JSON.parse( attr );
-      } catch ( error ) {
-        // log error, do not initialize
-        if ( console ) {
-          console.error( 'Error parsing ' + dataAttr + ' on ' + elem.className +
-          ': ' + error );
-        }
-        return;
-      }
-      // initialize
-      var instance = new WidgetClass( elem, options );
-      // make available via $().data('namespace')
-      if ( jQuery ) {
-        jQuery.data( elem, namespace, instance );
-      }
-    });
-
-  });
-};
-
-// -----  ----- //
-
-return utils;
-
-}));
-
-
-/***/ }),
 /* 48 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity main
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(49),
-      __webpack_require__(50),
-      __webpack_require__(47),
-      __webpack_require__(61),
-      __webpack_require__(62),
-      __webpack_require__(63)
-    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( EvEmitter, getSize, utils, Cell, Slide, animatePrototype ) {
-      return factory( window, EvEmitter, getSize, utils, Cell, Slide, animatePrototype );
-    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('ev-emitter'),
-      require('get-size'),
-      require('fizzy-ui-utils'),
-      require('./cell'),
-      require('./slide'),
-      require('./animate')
-    );
-  } else {
-    // browser global
-    var _Flickity = window.Flickity;
-
-    window.Flickity = factory(
-      window,
-      window.EvEmitter,
-      window.getSize,
-      window.fizzyUIUtils,
-      _Flickity.Cell,
-      _Flickity.Slide,
-      _Flickity.animatePrototype
-    );
-  }
-
-}( window, function factory( window, EvEmitter, getSize,
-  utils, Cell, Slide, animatePrototype ) {
-
-'use strict';
-
-// vars
-var jQuery = window.jQuery;
-var getComputedStyle = window.getComputedStyle;
-var console = window.console;
-
-function moveElements( elems, toElem ) {
-  elems = utils.makeArray( elems );
-  while ( elems.length ) {
-    toElem.appendChild( elems.shift() );
-  }
-}
-
-// -------------------------- Flickity -------------------------- //
-
-// globally unique identifiers
-var GUID = 0;
-// internal store of all Flickity intances
-var instances = {};
-
-function Flickity( element, options ) {
-  var queryElement = utils.getQueryElement( element );
-  if ( !queryElement ) {
-    if ( console ) {
-      console.error( 'Bad element for Flickity: ' + ( queryElement || element ) );
-    }
-    return;
-  }
-  this.element = queryElement;
-  // do not initialize twice on same element
-  if ( this.element.flickityGUID ) {
-    var instance = instances[ this.element.flickityGUID ];
-    instance.option( options );
-    return instance;
-  }
-
-  // add jQuery
-  if ( jQuery ) {
-    this.$element = jQuery( this.element );
-  }
-  // options
-  this.options = utils.extend( {}, this.constructor.defaults );
-  this.option( options );
-
-  // kick things off
-  this._create();
-}
-
-Flickity.defaults = {
-  accessibility: true,
-  // adaptiveHeight: false,
-  cellAlign: 'center',
-  // cellSelector: undefined,
-  // contain: false,
-  freeScrollFriction: 0.075, // friction when free-scrolling
-  friction: 0.28, // friction when selecting
-  namespaceJQueryEvents: true,
-  // initialIndex: 0,
-  percentPosition: true,
-  resize: true,
-  selectedAttraction: 0.025,
-  setGallerySize: true
-  // watchCSS: false,
-  // wrapAround: false
-};
-
-// hash of methods triggered on _create()
-Flickity.createMethods = [];
-
-var proto = Flickity.prototype;
-// inherit EventEmitter
-utils.extend( proto, EvEmitter.prototype );
-
-proto._create = function() {
-  // add id for Flickity.data
-  var id = this.guid = ++GUID;
-  this.element.flickityGUID = id; // expando
-  instances[ id ] = this; // associate via id
-  // initial properties
-  this.selectedIndex = 0;
-  // how many frames slider has been in same position
-  this.restingFrames = 0;
-  // initial physics properties
-  this.x = 0;
-  this.velocity = 0;
-  this.originSide = this.options.rightToLeft ? 'right' : 'left';
-  // create viewport & slider
-  this.viewport = document.createElement('div');
-  this.viewport.className = 'flickity-viewport';
-  this._createSlider();
-
-  if ( this.options.resize || this.options.watchCSS ) {
-    window.addEventListener( 'resize', this );
-  }
-
-  Flickity.createMethods.forEach( function( method ) {
-    this[ method ]();
-  }, this );
-
-  if ( this.options.watchCSS ) {
-    this.watchCSS();
-  } else {
-    this.activate();
-  }
-
-};
-
-/**
- * set options
- * @param {Object} opts
- */
-proto.option = function( opts ) {
-  utils.extend( this.options, opts );
-};
-
-proto.activate = function() {
-  if ( this.isActive ) {
-    return;
-  }
-  this.isActive = true;
-  this.element.classList.add('flickity-enabled');
-  if ( this.options.rightToLeft ) {
-    this.element.classList.add('flickity-rtl');
-  }
-
-  this.getSize();
-  // move initial cell elements so they can be loaded as cells
-  var cellElems = this._filterFindCellElements( this.element.children );
-  moveElements( cellElems, this.slider );
-  this.viewport.appendChild( this.slider );
-  this.element.appendChild( this.viewport );
-  // get cells from children
-  this.reloadCells();
-
-  if ( this.options.accessibility ) {
-    // allow element to focusable
-    this.element.tabIndex = 0;
-    // listen for key presses
-    this.element.addEventListener( 'keydown', this );
-  }
-
-  this.emitEvent('activate');
-
-  var index;
-  var initialIndex = this.options.initialIndex;
-  if ( this.isInitActivated ) {
-    index = this.selectedIndex;
-  } else if ( initialIndex !== undefined ) {
-    index = this.cells[ initialIndex ] ? initialIndex : 0;
-  } else {
-    index = 0;
-  }
-  // select instantly
-  this.select( index, false, true );
-  // flag for initial activation, for using initialIndex
-  this.isInitActivated = true;
-};
-
-// slider positions the cells
-proto._createSlider = function() {
-  // slider element does all the positioning
-  var slider = document.createElement('div');
-  slider.className = 'flickity-slider';
-  slider.style[ this.originSide ] = 0;
-  this.slider = slider;
-};
-
-proto._filterFindCellElements = function( elems ) {
-  return utils.filterFindElements( elems, this.options.cellSelector );
-};
-
-// goes through all children
-proto.reloadCells = function() {
-  // collection of item elements
-  this.cells = this._makeCells( this.slider.children );
-  this.positionCells();
-  this._getWrapShiftCells();
-  this.setGallerySize();
-};
-
-/**
- * turn elements into Flickity.Cells
- * @param {Array or NodeList or HTMLElement} elems
- * @returns {Array} items - collection of new Flickity Cells
- */
-proto._makeCells = function( elems ) {
-  var cellElems = this._filterFindCellElements( elems );
-
-  // create new Flickity for collection
-  var cells = cellElems.map( function( cellElem ) {
-    return new Cell( cellElem, this );
-  }, this );
-
-  return cells;
-};
-
-proto.getLastCell = function() {
-  return this.cells[ this.cells.length - 1 ];
-};
-
-proto.getLastSlide = function() {
-  return this.slides[ this.slides.length - 1 ];
-};
-
-// positions all cells
-proto.positionCells = function() {
-  // size all cells
-  this._sizeCells( this.cells );
-  // position all cells
-  this._positionCells( 0 );
-};
-
-/**
- * position certain cells
- * @param {Integer} index - which cell to start with
- */
-proto._positionCells = function( index ) {
-  index = index || 0;
-  // also measure maxCellHeight
-  // start 0 if positioning all cells
-  this.maxCellHeight = index ? this.maxCellHeight || 0 : 0;
-  var cellX = 0;
-  // get cellX
-  if ( index > 0 ) {
-    var startCell = this.cells[ index - 1 ];
-    cellX = startCell.x + startCell.size.outerWidth;
-  }
-  var len = this.cells.length;
-  for ( var i=index; i < len; i++ ) {
-    var cell = this.cells[i];
-    cell.setPosition( cellX );
-    cellX += cell.size.outerWidth;
-    this.maxCellHeight = Math.max( cell.size.outerHeight, this.maxCellHeight );
-  }
-  // keep track of cellX for wrap-around
-  this.slideableWidth = cellX;
-  // slides
-  this.updateSlides();
-  // contain slides target
-  this._containSlides();
-  // update slidesWidth
-  this.slidesWidth = len ? this.getLastSlide().target - this.slides[0].target : 0;
-};
-
-/**
- * cell.getSize() on multiple cells
- * @param {Array} cells
- */
-proto._sizeCells = function( cells ) {
-  cells.forEach( function( cell ) {
-    cell.getSize();
-  });
-};
-
-// --------------------------  -------------------------- //
-
-proto.updateSlides = function() {
-  this.slides = [];
-  if ( !this.cells.length ) {
-    return;
-  }
-
-  var slide = new Slide( this );
-  this.slides.push( slide );
-  var isOriginLeft = this.originSide == 'left';
-  var nextMargin = isOriginLeft ? 'marginRight' : 'marginLeft';
-
-  var canCellFit = this._getCanCellFit();
-
-  this.cells.forEach( function( cell, i ) {
-    // just add cell if first cell in slide
-    if ( !slide.cells.length ) {
-      slide.addCell( cell );
-      return;
-    }
-
-    var slideWidth = ( slide.outerWidth - slide.firstMargin ) +
-      ( cell.size.outerWidth - cell.size[ nextMargin ] );
-
-    if ( canCellFit.call( this, i, slideWidth ) ) {
-      slide.addCell( cell );
-    } else {
-      // doesn't fit, new slide
-      slide.updateTarget();
-
-      slide = new Slide( this );
-      this.slides.push( slide );
-      slide.addCell( cell );
-    }
-  }, this );
-  // last slide
-  slide.updateTarget();
-  // update .selectedSlide
-  this.updateSelectedSlide();
-};
-
-proto._getCanCellFit = function() {
-  var groupCells = this.options.groupCells;
-  if ( !groupCells ) {
-    return function() {
-      return false;
-    };
-  } else if ( typeof groupCells == 'number' ) {
-    // group by number. 3 -> [0,1,2], [3,4,5], ...
-    var number = parseInt( groupCells, 10 );
-    return function( i ) {
-      return ( i % number ) !== 0;
-    };
-  }
-  // default, group by width of slide
-  // parse '75%
-  var percentMatch = typeof groupCells == 'string' &&
-    groupCells.match(/^(\d+)%$/);
-  var percent = percentMatch ? parseInt( percentMatch[1], 10 ) / 100 : 1;
-  return function( i, slideWidth ) {
-    return slideWidth <= ( this.size.innerWidth + 1 ) * percent;
-  };
-};
-
-// alias _init for jQuery plugin .flickity()
-proto._init =
-proto.reposition = function() {
-  this.positionCells();
-  this.positionSliderAtSelected();
-};
-
-proto.getSize = function() {
-  this.size = getSize( this.element );
-  this.setCellAlign();
-  this.cursorPosition = this.size.innerWidth * this.cellAlign;
-};
-
-var cellAlignShorthands = {
-  // cell align, then based on origin side
-  center: {
-    left: 0.5,
-    right: 0.5
-  },
-  left: {
-    left: 0,
-    right: 1
-  },
-  right: {
-    right: 0,
-    left: 1
-  }
-};
-
-proto.setCellAlign = function() {
-  var shorthand = cellAlignShorthands[ this.options.cellAlign ];
-  this.cellAlign = shorthand ? shorthand[ this.originSide ] : this.options.cellAlign;
-};
-
-proto.setGallerySize = function() {
-  if ( this.options.setGallerySize ) {
-    var height = this.options.adaptiveHeight && this.selectedSlide ?
-      this.selectedSlide.height : this.maxCellHeight;
-    this.viewport.style.height = height + 'px';
-  }
-};
-
-proto._getWrapShiftCells = function() {
-  // only for wrap-around
-  if ( !this.options.wrapAround ) {
-    return;
-  }
-  // unshift previous cells
-  this._unshiftCells( this.beforeShiftCells );
-  this._unshiftCells( this.afterShiftCells );
-  // get before cells
-  // initial gap
-  var gapX = this.cursorPosition;
-  var cellIndex = this.cells.length - 1;
-  this.beforeShiftCells = this._getGapCells( gapX, cellIndex, -1 );
-  // get after cells
-  // ending gap between last cell and end of gallery viewport
-  gapX = this.size.innerWidth - this.cursorPosition;
-  // start cloning at first cell, working forwards
-  this.afterShiftCells = this._getGapCells( gapX, 0, 1 );
-};
-
-proto._getGapCells = function( gapX, cellIndex, increment ) {
-  // keep adding cells until the cover the initial gap
-  var cells = [];
-  while ( gapX > 0 ) {
-    var cell = this.cells[ cellIndex ];
-    if ( !cell ) {
-      break;
-    }
-    cells.push( cell );
-    cellIndex += increment;
-    gapX -= cell.size.outerWidth;
-  }
-  return cells;
-};
-
-// ----- contain ----- //
-
-// contain cell targets so no excess sliding
-proto._containSlides = function() {
-  if ( !this.options.contain || this.options.wrapAround || !this.cells.length ) {
-    return;
-  }
-  var isRightToLeft = this.options.rightToLeft;
-  var beginMargin = isRightToLeft ? 'marginRight' : 'marginLeft';
-  var endMargin = isRightToLeft ? 'marginLeft' : 'marginRight';
-  var contentWidth = this.slideableWidth - this.getLastCell().size[ endMargin ];
-  // content is less than gallery size
-  var isContentSmaller = contentWidth < this.size.innerWidth;
-  // bounds
-  var beginBound = this.cursorPosition + this.cells[0].size[ beginMargin ];
-  var endBound = contentWidth - this.size.innerWidth * ( 1 - this.cellAlign );
-  // contain each cell target
-  this.slides.forEach( function( slide ) {
-    if ( isContentSmaller ) {
-      // all cells fit inside gallery
-      slide.target = contentWidth * this.cellAlign;
-    } else {
-      // contain to bounds
-      slide.target = Math.max( slide.target, beginBound );
-      slide.target = Math.min( slide.target, endBound );
-    }
-  }, this );
-};
-
-// -----  ----- //
-
-/**
- * emits events via eventEmitter and jQuery events
- * @param {String} type - name of event
- * @param {Event} event - original event
- * @param {Array} args - extra arguments
- */
-proto.dispatchEvent = function( type, event, args ) {
-  var emitArgs = event ? [ event ].concat( args ) : args;
-  this.emitEvent( type, emitArgs );
-
-  if ( jQuery && this.$element ) {
-    // default trigger with type if no event
-    type += this.options.namespaceJQueryEvents ? '.flickity' : '';
-    var $event = type;
-    if ( event ) {
-      // create jQuery event
-      var jQEvent = jQuery.Event( event );
-      jQEvent.type = type;
-      $event = jQEvent;
-    }
-    this.$element.trigger( $event, args );
-  }
-};
-
-// -------------------------- select -------------------------- //
-
-/**
- * @param {Integer} index - index of the slide
- * @param {Boolean} isWrap - will wrap-around to last/first if at the end
- * @param {Boolean} isInstant - will immediately set position at selected cell
- */
-proto.select = function( index, isWrap, isInstant ) {
-  if ( !this.isActive ) {
-    return;
-  }
-  index = parseInt( index, 10 );
-  this._wrapSelect( index );
-
-  if ( this.options.wrapAround || isWrap ) {
-    index = utils.modulo( index, this.slides.length );
-  }
-  // bail if invalid index
-  if ( !this.slides[ index ] ) {
-    return;
-  }
-  this.selectedIndex = index;
-  this.updateSelectedSlide();
-  if ( isInstant ) {
-    this.positionSliderAtSelected();
-  } else {
-    this.startAnimation();
-  }
-  if ( this.options.adaptiveHeight ) {
-    this.setGallerySize();
-  }
-
-  this.dispatchEvent('select');
-  // old v1 event name, remove in v3
-  this.dispatchEvent('cellSelect');
-};
-
-// wraps position for wrapAround, to move to closest slide. #113
-proto._wrapSelect = function( index ) {
-  var len = this.slides.length;
-  var isWrapping = this.options.wrapAround && len > 1;
-  if ( !isWrapping ) {
-    return index;
-  }
-  var wrapIndex = utils.modulo( index, len );
-  // go to shortest
-  var delta = Math.abs( wrapIndex - this.selectedIndex );
-  var backWrapDelta = Math.abs( ( wrapIndex + len ) - this.selectedIndex );
-  var forewardWrapDelta = Math.abs( ( wrapIndex - len ) - this.selectedIndex );
-  if ( !this.isDragSelect && backWrapDelta < delta ) {
-    index += len;
-  } else if ( !this.isDragSelect && forewardWrapDelta < delta ) {
-    index -= len;
-  }
-  // wrap position so slider is within normal area
-  if ( index < 0 ) {
-    this.x -= this.slideableWidth;
-  } else if ( index >= len ) {
-    this.x += this.slideableWidth;
-  }
-};
-
-proto.previous = function( isWrap, isInstant ) {
-  this.select( this.selectedIndex - 1, isWrap, isInstant );
-};
-
-proto.next = function( isWrap, isInstant ) {
-  this.select( this.selectedIndex + 1, isWrap, isInstant );
-};
-
-proto.updateSelectedSlide = function() {
-  var slide = this.slides[ this.selectedIndex ];
-  // selectedIndex could be outside of slides, if triggered before resize()
-  if ( !slide ) {
-    return;
-  }
-  // unselect previous selected slide
-  this.unselectSelectedSlide();
-  // update new selected slide
-  this.selectedSlide = slide;
-  slide.select();
-  this.selectedCells = slide.cells;
-  this.selectedElements = slide.getCellElements();
-  // HACK: selectedCell & selectedElement is first cell in slide, backwards compatibility
-  // Remove in v3?
-  this.selectedCell = slide.cells[0];
-  this.selectedElement = this.selectedElements[0];
-};
-
-proto.unselectSelectedSlide = function() {
-  if ( this.selectedSlide ) {
-    this.selectedSlide.unselect();
-  }
-};
-
-/**
- * select slide from number or cell element
- * @param {Element or Number} elem
- */
-proto.selectCell = function( value, isWrap, isInstant ) {
-  // get cell
-  var cell;
-  if ( typeof value == 'number' ) {
-    cell = this.cells[ value ];
-  } else {
-    // use string as selector
-    if ( typeof value == 'string' ) {
-      value = this.element.querySelector( value );
-    }
-    // get cell from element
-    cell = this.getCell( value );
-  }
-  // select slide that has cell
-  for ( var i=0; cell && i < this.slides.length; i++ ) {
-    var slide = this.slides[i];
-    var index = slide.cells.indexOf( cell );
-    if ( index != -1 ) {
-      this.select( i, isWrap, isInstant );
-      return;
-    }
-  }
-};
-
-// -------------------------- get cells -------------------------- //
-
-/**
- * get Flickity.Cell, given an Element
- * @param {Element} elem
- * @returns {Flickity.Cell} item
- */
-proto.getCell = function( elem ) {
-  // loop through cells to get the one that matches
-  for ( var i=0; i < this.cells.length; i++ ) {
-    var cell = this.cells[i];
-    if ( cell.element == elem ) {
-      return cell;
-    }
-  }
-};
-
-/**
- * get collection of Flickity.Cells, given Elements
- * @param {Element, Array, NodeList} elems
- * @returns {Array} cells - Flickity.Cells
- */
-proto.getCells = function( elems ) {
-  elems = utils.makeArray( elems );
-  var cells = [];
-  elems.forEach( function( elem ) {
-    var cell = this.getCell( elem );
-    if ( cell ) {
-      cells.push( cell );
-    }
-  }, this );
-  return cells;
-};
-
-/**
- * get cell elements
- * @returns {Array} cellElems
- */
-proto.getCellElements = function() {
-  return this.cells.map( function( cell ) {
-    return cell.element;
-  });
-};
-
-/**
- * get parent cell from an element
- * @param {Element} elem
- * @returns {Flickit.Cell} cell
- */
-proto.getParentCell = function( elem ) {
-  // first check if elem is cell
-  var cell = this.getCell( elem );
-  if ( cell ) {
-    return cell;
-  }
-  // try to get parent cell elem
-  elem = utils.getParent( elem, '.flickity-slider > *' );
-  return this.getCell( elem );
-};
-
-/**
- * get cells adjacent to a slide
- * @param {Integer} adjCount - number of adjacent slides
- * @param {Integer} index - index of slide to start
- * @returns {Array} cells - array of Flickity.Cells
- */
-proto.getAdjacentCellElements = function( adjCount, index ) {
-  if ( !adjCount ) {
-    return this.selectedSlide.getCellElements();
-  }
-  index = index === undefined ? this.selectedIndex : index;
-
-  var len = this.slides.length;
-  if ( 1 + ( adjCount * 2 ) >= len ) {
-    return this.getCellElements();
-  }
-
-  var cellElems = [];
-  for ( var i = index - adjCount; i <= index + adjCount ; i++ ) {
-    var slideIndex = this.options.wrapAround ? utils.modulo( i, len ) : i;
-    var slide = this.slides[ slideIndex ];
-    if ( slide ) {
-      cellElems = cellElems.concat( slide.getCellElements() );
-    }
-  }
-  return cellElems;
-};
-
-// -------------------------- events -------------------------- //
-
-proto.uiChange = function() {
-  this.emitEvent('uiChange');
-};
-
-proto.childUIPointerDown = function( event ) {
-  this.emitEvent( 'childUIPointerDown', [ event ] );
-};
-
-// ----- resize ----- //
-
-proto.onresize = function() {
-  this.watchCSS();
-  this.resize();
-};
-
-utils.debounceMethod( Flickity, 'onresize', 150 );
-
-proto.resize = function() {
-  if ( !this.isActive ) {
-    return;
-  }
-  this.getSize();
-  // wrap values
-  if ( this.options.wrapAround ) {
-    this.x = utils.modulo( this.x, this.slideableWidth );
-  }
-  this.positionCells();
-  this._getWrapShiftCells();
-  this.setGallerySize();
-  this.emitEvent('resize');
-  // update selected index for group slides, instant
-  // TODO: position can be lost between groups of various numbers
-  var selectedElement = this.selectedElements && this.selectedElements[0];
-  this.selectCell( selectedElement, false, true );
-};
-
-// watches the :after property, activates/deactivates
-proto.watchCSS = function() {
-  var watchOption = this.options.watchCSS;
-  if ( !watchOption ) {
-    return;
-  }
-
-  var afterContent = getComputedStyle( this.element, ':after' ).content;
-  // activate if :after { content: 'flickity' }
-  if ( afterContent.indexOf('flickity') != -1 ) {
-    this.activate();
-  } else {
-    this.deactivate();
-  }
-};
-
-// ----- keydown ----- //
-
-// go previous/next if left/right keys pressed
-proto.onkeydown = function( event ) {
-  // only work if element is in focus
-  if ( !this.options.accessibility ||
-    ( document.activeElement && document.activeElement != this.element ) ) {
-    return;
-  }
-
-  if ( event.keyCode == 37 ) {
-    // go left
-    var leftMethod = this.options.rightToLeft ? 'next' : 'previous';
-    this.uiChange();
-    this[ leftMethod ]();
-  } else if ( event.keyCode == 39 ) {
-    // go right
-    var rightMethod = this.options.rightToLeft ? 'previous' : 'next';
-    this.uiChange();
-    this[ rightMethod ]();
-  }
-};
-
-// -------------------------- destroy -------------------------- //
-
-// deactivate all Flickity functionality, but keep stuff available
-proto.deactivate = function() {
-  if ( !this.isActive ) {
-    return;
-  }
-  this.element.classList.remove('flickity-enabled');
-  this.element.classList.remove('flickity-rtl');
-  // destroy cells
-  this.cells.forEach( function( cell ) {
-    cell.destroy();
-  });
-  this.unselectSelectedSlide();
-  this.element.removeChild( this.viewport );
-  // move child elements back into element
-  moveElements( this.slider.children, this.element );
-  if ( this.options.accessibility ) {
-    this.element.removeAttribute('tabIndex');
-    this.element.removeEventListener( 'keydown', this );
-  }
-  // set flags
-  this.isActive = false;
-  this.emitEvent('deactivate');
-};
-
-proto.destroy = function() {
-  this.deactivate();
-  window.removeEventListener( 'resize', this );
-  this.emitEvent('destroy');
-  if ( jQuery && this.$element ) {
-    jQuery.removeData( this.element, 'flickity' );
-  }
-  delete this.element.flickityGUID;
-  delete instances[ this.guid ];
-};
-
-// -------------------------- prototype -------------------------- //
-
-utils.extend( proto, animatePrototype );
-
-// -------------------------- extras -------------------------- //
-
-/**
- * get Flickity instance from element
- * @param {Element} elem
- * @returns {Flickity}
- */
-Flickity.data = function( elem ) {
-  elem = utils.getQueryElement( elem );
-  var id = elem && elem.flickityGUID;
-  return id && instances[ id ];
-};
-
-utils.htmlInit( Flickity, 'flickity' );
-
-if ( jQuery && jQuery.bridget ) {
-  jQuery.bridget( 'flickity', Flickity );
-}
-
-// set internal jQuery, for Webpack + jQuery v3, #478
-Flickity.setJQuery = function( jq ) {
-  jQuery = jq;
-};
-
-Flickity.Cell = Cell;
-
-return Flickity;
-
-}));
-
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
- * EvEmitter v1.1.0
- * Lil' event emitter
- * MIT License
- */
-
-/* jshint unused: true, undef: true, strict: true */
-
-( function( global, factory ) {
-  // universal module definition
-  /* jshint strict: false */ /* globals define, module, window */
-  if ( true ) {
-    // AMD - RequireJS
-    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
-				__WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS - Browserify, Webpack
-    module.exports = factory();
-  } else {
-    // Browser globals
-    global.EvEmitter = factory();
-  }
-
-}( typeof window != 'undefined' ? window : this, function() {
-
-"use strict";
-
-function EvEmitter() {}
-
-var proto = EvEmitter.prototype;
-
-proto.on = function( eventName, listener ) {
-  if ( !eventName || !listener ) {
-    return;
-  }
-  // set events hash
-  var events = this._events = this._events || {};
-  // set listeners array
-  var listeners = events[ eventName ] = events[ eventName ] || [];
-  // only add once
-  if ( listeners.indexOf( listener ) == -1 ) {
-    listeners.push( listener );
-  }
-
-  return this;
-};
-
-proto.once = function( eventName, listener ) {
-  if ( !eventName || !listener ) {
-    return;
-  }
-  // add event
-  this.on( eventName, listener );
-  // set once flag
-  // set onceEvents hash
-  var onceEvents = this._onceEvents = this._onceEvents || {};
-  // set onceListeners object
-  var onceListeners = onceEvents[ eventName ] = onceEvents[ eventName ] || {};
-  // set flag
-  onceListeners[ listener ] = true;
-
-  return this;
-};
-
-proto.off = function( eventName, listener ) {
-  var listeners = this._events && this._events[ eventName ];
-  if ( !listeners || !listeners.length ) {
-    return;
-  }
-  var index = listeners.indexOf( listener );
-  if ( index != -1 ) {
-    listeners.splice( index, 1 );
-  }
-
-  return this;
-};
-
-proto.emitEvent = function( eventName, args ) {
-  var listeners = this._events && this._events[ eventName ];
-  if ( !listeners || !listeners.length ) {
-    return;
-  }
-  // copy over to avoid interference if .off() in listener
-  listeners = listeners.slice(0);
-  args = args || [];
-  // once stuff
-  var onceListeners = this._onceEvents && this._onceEvents[ eventName ];
-
-  for ( var i=0; i < listeners.length; i++ ) {
-    var listener = listeners[i]
-    var isOnce = onceListeners && onceListeners[ listener ];
-    if ( isOnce ) {
-      // remove listener
-      // remove before trigger to prevent recursion
-      this.off( eventName, listener );
-      // unset once flag
-      delete onceListeners[ listener ];
-    }
-    // trigger listener
-    listener.apply( this, args );
-  }
-
-  return this;
-};
-
-proto.allOff = function() {
-  delete this._events;
-  delete this._onceEvents;
-};
-
-return EvEmitter;
-
-}));
-
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * getSize v2.0.2
- * measure size of elements
- * MIT license
- */
-
-/*jshint browser: true, strict: true, undef: true, unused: true */
-/*global define: false, module: false, console: false */
-
-( function( window, factory ) {
-  'use strict';
-
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_RESULT__ = function() {
-      return factory();
-    }.call(exports, __webpack_require__, exports, module),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory();
-  } else {
-    // browser global
-    window.getSize = factory();
-  }
-
-})( window, function factory() {
-'use strict';
-
-// -------------------------- helpers -------------------------- //
-
-// get a number from a string, not a percentage
-function getStyleSize( value ) {
-  var num = parseFloat( value );
-  // not a percent like '100%', and a number
-  var isValid = value.indexOf('%') == -1 && !isNaN( num );
-  return isValid && num;
-}
-
-function noop() {}
-
-var logError = typeof console == 'undefined' ? noop :
-  function( message ) {
-    console.error( message );
-  };
-
-// -------------------------- measurements -------------------------- //
-
-var measurements = [
-  'paddingLeft',
-  'paddingRight',
-  'paddingTop',
-  'paddingBottom',
-  'marginLeft',
-  'marginRight',
-  'marginTop',
-  'marginBottom',
-  'borderLeftWidth',
-  'borderRightWidth',
-  'borderTopWidth',
-  'borderBottomWidth'
-];
-
-var measurementsLength = measurements.length;
-
-function getZeroSize() {
-  var size = {
-    width: 0,
-    height: 0,
-    innerWidth: 0,
-    innerHeight: 0,
-    outerWidth: 0,
-    outerHeight: 0
-  };
-  for ( var i=0; i < measurementsLength; i++ ) {
-    var measurement = measurements[i];
-    size[ measurement ] = 0;
-  }
-  return size;
-}
-
-// -------------------------- getStyle -------------------------- //
-
-/**
- * getStyle, get style of element, check for Firefox bug
- * https://bugzilla.mozilla.org/show_bug.cgi?id=548397
- */
-function getStyle( elem ) {
-  var style = getComputedStyle( elem );
-  if ( !style ) {
-    logError( 'Style returned ' + style +
-      '. Are you running this code in a hidden iframe on Firefox? ' +
-      'See http://bit.ly/getsizebug1' );
-  }
-  return style;
-}
-
-// -------------------------- setup -------------------------- //
-
-var isSetup = false;
-
-var isBoxSizeOuter;
-
-/**
- * setup
- * check isBoxSizerOuter
- * do on first getSize() rather than on page load for Firefox bug
- */
-function setup() {
-  // setup once
-  if ( isSetup ) {
-    return;
-  }
-  isSetup = true;
-
-  // -------------------------- box sizing -------------------------- //
-
-  /**
-   * WebKit measures the outer-width on style.width on border-box elems
-   * IE & Firefox<29 measures the inner-width
-   */
-  var div = document.createElement('div');
-  div.style.width = '200px';
-  div.style.padding = '1px 2px 3px 4px';
-  div.style.borderStyle = 'solid';
-  div.style.borderWidth = '1px 2px 3px 4px';
-  div.style.boxSizing = 'border-box';
-
-  var body = document.body || document.documentElement;
-  body.appendChild( div );
-  var style = getStyle( div );
-
-  getSize.isBoxSizeOuter = isBoxSizeOuter = getStyleSize( style.width ) == 200;
-  body.removeChild( div );
-
-}
-
-// -------------------------- getSize -------------------------- //
-
-function getSize( elem ) {
-  setup();
-
-  // use querySeletor if elem is string
-  if ( typeof elem == 'string' ) {
-    elem = document.querySelector( elem );
-  }
-
-  // do not proceed on non-objects
-  if ( !elem || typeof elem != 'object' || !elem.nodeType ) {
-    return;
-  }
-
-  var style = getStyle( elem );
-
-  // if hidden, everything is 0
-  if ( style.display == 'none' ) {
-    return getZeroSize();
-  }
-
-  var size = {};
-  size.width = elem.offsetWidth;
-  size.height = elem.offsetHeight;
-
-  var isBorderBox = size.isBorderBox = style.boxSizing == 'border-box';
-
-  // get all measurements
-  for ( var i=0; i < measurementsLength; i++ ) {
-    var measurement = measurements[i];
-    var value = style[ measurement ];
-    var num = parseFloat( value );
-    // any 'auto', 'medium' value will be 0
-    size[ measurement ] = !isNaN( num ) ? num : 0;
-  }
-
-  var paddingWidth = size.paddingLeft + size.paddingRight;
-  var paddingHeight = size.paddingTop + size.paddingBottom;
-  var marginWidth = size.marginLeft + size.marginRight;
-  var marginHeight = size.marginTop + size.marginBottom;
-  var borderWidth = size.borderLeftWidth + size.borderRightWidth;
-  var borderHeight = size.borderTopWidth + size.borderBottomWidth;
-
-  var isBorderBoxSizeOuter = isBorderBox && isBoxSizeOuter;
-
-  // overwrite width and height if we can get it from style
-  var styleWidth = getStyleSize( style.width );
-  if ( styleWidth !== false ) {
-    size.width = styleWidth +
-      // add padding and border unless it's already including it
-      ( isBorderBoxSizeOuter ? 0 : paddingWidth + borderWidth );
-  }
-
-  var styleHeight = getStyleSize( style.height );
-  if ( styleHeight !== false ) {
-    size.height = styleHeight +
-      // add padding and border unless it's already including it
-      ( isBorderBoxSizeOuter ? 0 : paddingHeight + borderHeight );
-  }
-
-  size.innerWidth = size.width - ( paddingWidth + borderWidth );
-  size.innerHeight = size.height - ( paddingHeight + borderHeight );
-
-  size.outerWidth = size.width + marginWidth;
-  size.outerHeight = size.height + marginHeight;
-
-  return size;
-}
-
-return getSize;
-
-});
-
-
-/***/ }),
-/* 51 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * Unipointer v2.2.1
- * base class for doing one thing with pointer event
- * MIT license
- */
-
-/*jshint browser: true, undef: true, unused: true, strict: true */
-
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */ /*global define, module, require */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(49)
-    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( EvEmitter ) {
-      return factory( window, EvEmitter );
-    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('ev-emitter')
-    );
-  } else {
-    // browser global
-    window.Unipointer = factory(
-      window,
-      window.EvEmitter
-    );
-  }
-
-}( window, function factory( window, EvEmitter ) {
-
-'use strict';
-
-function noop() {}
-
-function Unipointer() {}
-
-// inherit EvEmitter
-var proto = Unipointer.prototype = Object.create( EvEmitter.prototype );
-
-proto.bindStartEvent = function( elem ) {
-  this._bindStartEvent( elem, true );
-};
-
-proto.unbindStartEvent = function( elem ) {
-  this._bindStartEvent( elem, false );
-};
-
-/**
- * works as unbinder, as you can ._bindStart( false ) to unbind
- * @param {Boolean} isBind - will unbind if falsey
- */
-proto._bindStartEvent = function( elem, isBind ) {
-  // munge isBind, default to true
-  isBind = isBind === undefined ? true : !!isBind;
-  var bindMethod = isBind ? 'addEventListener' : 'removeEventListener';
-
-  if ( window.PointerEvent ) {
-    // Pointer Events. Chrome 55, IE11, Edge 14
-    elem[ bindMethod ]( 'pointerdown', this );
-  } else {
-    // listen for both, for devices like Chrome Pixel
-    elem[ bindMethod ]( 'mousedown', this );
-    elem[ bindMethod ]( 'touchstart', this );
-  }
-};
-
-// trigger handler methods for events
-proto.handleEvent = function( event ) {
-  var method = 'on' + event.type;
-  if ( this[ method ] ) {
-    this[ method ]( event );
-  }
-};
-
-// returns the touch that we're keeping track of
-proto.getTouch = function( touches ) {
-  for ( var i=0; i < touches.length; i++ ) {
-    var touch = touches[i];
-    if ( touch.identifier == this.pointerIdentifier ) {
-      return touch;
-    }
-  }
-};
-
-// ----- start event ----- //
-
-proto.onmousedown = function( event ) {
-  // dismiss clicks from right or middle buttons
-  var button = event.button;
-  if ( button && ( button !== 0 && button !== 1 ) ) {
-    return;
-  }
-  this._pointerDown( event, event );
-};
-
-proto.ontouchstart = function( event ) {
-  this._pointerDown( event, event.changedTouches[0] );
-};
-
-proto.onpointerdown = function( event ) {
-  this._pointerDown( event, event );
-};
-
-/**
- * pointer start
- * @param {Event} event
- * @param {Event or Touch} pointer
- */
-proto._pointerDown = function( event, pointer ) {
-  // dismiss right click and other pointers
-  // button = 0 is okay, 1-4 not
-  if ( event.button || this.isPointerDown ) {
-    return;
-  }
-
-  this.isPointerDown = true;
-  // save pointer identifier to match up touch events
-  this.pointerIdentifier = pointer.pointerId !== undefined ?
-    // pointerId for pointer events, touch.indentifier for touch events
-    pointer.pointerId : pointer.identifier;
-
-  this.pointerDown( event, pointer );
-};
-
-proto.pointerDown = function( event, pointer ) {
-  this._bindPostStartEvents( event );
-  this.emitEvent( 'pointerDown', [ event, pointer ] );
-};
-
-// hash of events to be bound after start event
-var postStartEvents = {
-  mousedown: [ 'mousemove', 'mouseup' ],
-  touchstart: [ 'touchmove', 'touchend', 'touchcancel' ],
-  pointerdown: [ 'pointermove', 'pointerup', 'pointercancel' ],
-};
-
-proto._bindPostStartEvents = function( event ) {
-  if ( !event ) {
-    return;
-  }
-  // get proper events to match start event
-  var events = postStartEvents[ event.type ];
-  // bind events to node
-  events.forEach( function( eventName ) {
-    window.addEventListener( eventName, this );
-  }, this );
-  // save these arguments
-  this._boundPointerEvents = events;
-};
-
-proto._unbindPostStartEvents = function() {
-  // check for _boundEvents, in case dragEnd triggered twice (old IE8 bug)
-  if ( !this._boundPointerEvents ) {
-    return;
-  }
-  this._boundPointerEvents.forEach( function( eventName ) {
-    window.removeEventListener( eventName, this );
-  }, this );
-
-  delete this._boundPointerEvents;
-};
-
-// ----- move event ----- //
-
-proto.onmousemove = function( event ) {
-  this._pointerMove( event, event );
-};
-
-proto.onpointermove = function( event ) {
-  if ( event.pointerId == this.pointerIdentifier ) {
-    this._pointerMove( event, event );
-  }
-};
-
-proto.ontouchmove = function( event ) {
-  var touch = this.getTouch( event.changedTouches );
-  if ( touch ) {
-    this._pointerMove( event, touch );
-  }
-};
-
-/**
- * pointer move
- * @param {Event} event
- * @param {Event or Touch} pointer
- * @private
- */
-proto._pointerMove = function( event, pointer ) {
-  this.pointerMove( event, pointer );
-};
-
-// public
-proto.pointerMove = function( event, pointer ) {
-  this.emitEvent( 'pointerMove', [ event, pointer ] );
-};
-
-// ----- end event ----- //
-
-
-proto.onmouseup = function( event ) {
-  this._pointerUp( event, event );
-};
-
-proto.onpointerup = function( event ) {
-  if ( event.pointerId == this.pointerIdentifier ) {
-    this._pointerUp( event, event );
-  }
-};
-
-proto.ontouchend = function( event ) {
-  var touch = this.getTouch( event.changedTouches );
-  if ( touch ) {
-    this._pointerUp( event, touch );
-  }
-};
-
-/**
- * pointer up
- * @param {Event} event
- * @param {Event or Touch} pointer
- * @private
- */
-proto._pointerUp = function( event, pointer ) {
-  this._pointerDone();
-  this.pointerUp( event, pointer );
-};
-
-// public
-proto.pointerUp = function( event, pointer ) {
-  this.emitEvent( 'pointerUp', [ event, pointer ] );
-};
-
-// ----- pointer done ----- //
-
-// triggered on pointer up & pointer cancel
-proto._pointerDone = function() {
-  // reset properties
-  this.isPointerDown = false;
-  delete this.pointerIdentifier;
-  // remove events
-  this._unbindPostStartEvents();
-  this.pointerDone();
-};
-
-proto.pointerDone = noop;
-
-// ----- pointer cancel ----- //
-
-proto.onpointercancel = function( event ) {
-  if ( event.pointerId == this.pointerIdentifier ) {
-    this._pointerCancel( event, event );
-  }
-};
-
-proto.ontouchcancel = function( event ) {
-  var touch = this.getTouch( event.changedTouches );
-  if ( touch ) {
-    this._pointerCancel( event, touch );
-  }
-};
-
-/**
- * pointer cancel
- * @param {Event} event
- * @param {Event or Touch} pointer
- * @private
- */
-proto._pointerCancel = function( event, pointer ) {
-  this._pointerDone();
-  this.pointerCancel( event, pointer );
-};
-
-// public
-proto.pointerCancel = function( event, pointer ) {
-  this.emitEvent( 'pointerCancel', [ event, pointer ] );
-};
-
-// -----  ----- //
-
-// utility function for getting x/y coords from event
-Unipointer.getPointerPoint = function( pointer ) {
-  return {
-    x: pointer.pageX,
-    y: pointer.pageY
-  };
-};
-
-// -----  ----- //
-
-return Unipointer;
-
-}));
-
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * Tap listener v2.0.0
- * listens to taps
- * MIT license
- */
-
-/*jshint browser: true, unused: true, undef: true, strict: true */
-
-( function( window, factory ) {
-  // universal module definition
-  /*jshint strict: false*/ /*globals define, module, require */
-
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(51)
-    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Unipointer ) {
-      return factory( window, Unipointer );
-    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('unipointer')
-    );
-  } else {
-    // browser global
-    window.TapListener = factory(
-      window,
-      window.Unipointer
-    );
-  }
-
-}( window, function factory( window, Unipointer ) {
-
-'use strict';
-
-// --------------------------  TapListener -------------------------- //
-
-function TapListener( elem ) {
-  this.bindTap( elem );
-}
-
-// inherit Unipointer & EventEmitter
-var proto = TapListener.prototype = Object.create( Unipointer.prototype );
-
-/**
- * bind tap event to element
- * @param {Element} elem
- */
-proto.bindTap = function( elem ) {
-  if ( !elem ) {
-    return;
-  }
-  this.unbindTap();
-  this.tapElement = elem;
-  this._bindStartEvent( elem, true );
-};
-
-proto.unbindTap = function() {
-  if ( !this.tapElement ) {
-    return;
-  }
-  this._bindStartEvent( this.tapElement, true );
-  delete this.tapElement;
-};
-
-/**
- * pointer up
- * @param {Event} event
- * @param {Event or Touch} pointer
- */
-proto.pointerUp = function( event, pointer ) {
-  // ignore emulated mouse up clicks
-  if ( this.isIgnoringMouseUp && event.type == 'mouseup' ) {
-    return;
-  }
-
-  var pointerPoint = Unipointer.getPointerPoint( pointer );
-  var boundingRect = this.tapElement.getBoundingClientRect();
-  var scrollX = window.pageXOffset;
-  var scrollY = window.pageYOffset;
-  // calculate if pointer is inside tapElement
-  var isInside = pointerPoint.x >= boundingRect.left + scrollX &&
-    pointerPoint.x <= boundingRect.right + scrollX &&
-    pointerPoint.y >= boundingRect.top + scrollY &&
-    pointerPoint.y <= boundingRect.bottom + scrollY;
-  // trigger callback if pointer is inside element
-  if ( isInside ) {
-    this.emitEvent( 'tap', [ event, pointer ] );
-  }
-
-  // set flag for emulated clicks 300ms after touchend
-  if ( event.type != 'mouseup' ) {
-    this.isIgnoringMouseUp = true;
-    // reset flag after 300ms
-    var _this = this;
-    setTimeout( function() {
-      delete _this.isIgnoringMouseUp;
-    }, 400 );
-  }
-};
-
-proto.destroy = function() {
-  this.pointerDone();
-  this.unbindTap();
-};
-
-// -----  ----- //
-
-return TapListener;
-
-}));
-
-
-/***/ }),
-/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_carousel_vue__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2ac553ee_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_carousel_vue__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_vuecarousel_vue__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_32e59ccd_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_vuecarousel_vue__ = __webpack_require__(52);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(54)
+  __webpack_require__(49)
 }
 var normalizeComponent = __webpack_require__(2)
 /* script */
@@ -19705,14 +17703,14 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_carousel_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_2ac553ee_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_carousel_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_bustCache_vuecarousel_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_32e59ccd_hasScoped_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_bustCache_vuecarousel_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "public/src/components/carousel.vue"
+Component.options.__file = "public/src/components/vuecarousel.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -19722,9 +17720,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-2ac553ee", Component.options)
+    hotAPI.createRecord("data-v-32e59ccd", Component.options)
   } else {
-    hotAPI.reload("data-v-2ac553ee", Component.options)
+    hotAPI.reload("data-v-32e59ccd", Component.options)
 ' + '  }
   module.hot.dispose(function (data) {
     disposed = true
@@ -19735,23 +17733,23 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 54 */
+/* 49 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(55);
+var content = __webpack_require__(50);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("3e9176f3", content, false);
+var update = __webpack_require__(1)("1397db96", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
  if(!content.locals) {
-   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2ac553ee\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./carousel.vue", function() {
-     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-2ac553ee\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./carousel.vue");
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-32e59ccd\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./vuecarousel.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-32e59ccd\",\"scoped\":false,\"hasInlineConfig\":false}!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0&bustCache!./vuecarousel.vue");
      if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
      update(newContent);
    });
@@ -19761,7 +17759,7 @@ if(false) {
 }
 
 /***/ }),
-/* 55 */
+/* 50 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -19769,17 +17767,18 @@ exports = module.exports = __webpack_require__(0)(undefined);
 
 
 // module
-exports.push([module.i, "\nimg {\n  width: 90%;\n}\n", ""]);
+exports.push([module.i, "\nimg {\n    width: 90%;\n}\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 56 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_flickity__ = __webpack_require__(57);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_carousel__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_vue_carousel___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_vue_carousel__);
 //
 //
 //
@@ -19787,2384 +17786,19 @@ exports.push([module.i, "\nimg {\n  width: 90%;\n}\n", ""]);
 //
 //
 //
-//
-//
-
 
 
 /* harmony default export */ __webpack_exports__["a"] = ({
   data() {
-    return {
-      flickityOptions: {
-        initialIndex: 3,
-        prevNextButtons: false,
-        pageDots: false,
-        wrapAround: true
-      }
-    };
+    return {};
   },
-  props: [],
-  name: "carousel",
-  components: {},
-  created: function () {},
-
-  methods: {}
+  props: ['images'],
+  name: "vuecarousel",
+  components: { Carousel: __WEBPACK_IMPORTED_MODULE_0_vue_carousel__["Carousel"], Slide: __WEBPACK_IMPORTED_MODULE_0_vue_carousel__["Slide"] }
 });
 
 /***/ }),
-/* 57 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_bustCache_flickity_vue__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__vue_loader_lib_template_compiler_index_id_data_v_4a5097b8_hasScoped_false_buble_transforms_vue_loader_lib_selector_type_template_index_0_bustCache_flickity_vue__ = __webpack_require__(71);
-var disposed = false
-var normalizeComponent = __webpack_require__(2)
-/* script */
-
-/* template */
-
-/* template functional */
-  var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = null
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_vue_loader_lib_selector_type_script_index_0_bustCache_flickity_vue__["a" /* default */],
-  __WEBPACK_IMPORTED_MODULE_1__vue_loader_lib_template_compiler_index_id_data_v_4a5097b8_hasScoped_false_buble_transforms_vue_loader_lib_selector_type_template_index_0_bustCache_flickity_vue__["a" /* default */],
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "node_modules/vue-flickity/flickity.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4a5097b8", Component.options)
-  } else {
-    hotAPI.reload("data-v-4a5097b8", Component.options)
-' + '  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-/* unused harmony default export */ var _unused_webpack_default_export = (Component.exports);
-
-
-/***/ }),
-/* 58 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_flickity__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_flickity___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_flickity__);
-//
-//
-//
-//
-//
-//
-
-
-
-/* harmony default export */ __webpack_exports__["a"] = ({
-    props: {
-        options: {
-            type: Object,
-
-            default() {
-                return {};
-            }
-        }
-    },
-
-    mounted() {
-        this.init();
-    },
-
-    beforeDestroy() {
-        this.flickity.destroy();
-        this.flickity = null;
-    },
-
-    methods: {
-        init() {
-            this.flickity = new __WEBPACK_IMPORTED_MODULE_0_flickity___default.a(this.$el, this.options);
-            this.$emit('init', this.flickity);
-        },
-
-        next(isWrapped, isInstant) {
-            this.flickity.next(isWrapped, isInstant);
-        },
-
-        previous(isWrapped, isInstant) {
-            this.flickity.previous(isWrapped, isInstant);
-        },
-
-        select(index, isWrapped, isInstant) {
-            this.flickity.select(index, isWrapped, isInstant);
-        },
-
-        selectedIndex() {
-            return this.flickity.selectedIndex;
-        },
-
-        selectCell(value, isWrapped, isInstant) {
-            this.flickity.selectCell(value, isWrapped, isInstant);
-        },
-
-        resize() {
-            this.flickity.resize();
-        },
-
-        reposition() {
-            this.flickity.reposition();
-        },
-
-        prepend(elements) {
-            this.flickity.prepend(elements);
-        },
-
-        append(elements) {
-            this.flickity.append(elements);
-        },
-
-        insert(elements, index) {
-            this.flickity.insert(elements, index);
-        },
-
-        remove(elements) {
-            this.flickity.remove(elements);
-        },
-
-        playPlayer() {
-            this.flickity.playPlayer();
-        },
-
-        stopPlayer() {
-            this.flickity.stopPlayer();
-        },
-
-        pausePlayer() {
-            this.flickity.pausePlayer();
-        },
-
-        unpausePlayer() {
-            this.flickity.unpausePlayer();
-        },
-
-        rerender() {
-            this.flickity.destroy();
-            this.init();
-        },
-
-        destroy() {
-            this.flickity.destroy();
-        },
-
-        reloadCells() {
-            this.flickity.reloadCells();
-        },
-
-        getCellElements() {
-            this.flickity.getCellElements();
-        },
-
-        data() {
-            return __WEBPACK_IMPORTED_MODULE_0_flickity___default.a.data(this.$el);
-        },
-
-        on(eventName, listener) {
-            this.flickity.on(eventName, listener);
-        },
-
-        off(eventName, listener) {
-            this.flickity.off(eventName, listener);
-        },
-
-        once(eventName, listener) {
-            this.flickity.once(eventName, listener);
-        }
-    }
-
-});
-
-/***/ }),
-/* 59 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * Flickity v2.0.10
- * Touch, responsive, flickable carousels
- *
- * Licensed GPLv3 for open source use
- * or Flickity Commercial License for commercial use
- *
- * http://flickity.metafizzy.co
- * Copyright 2017 Metafizzy
- */
-
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(48),
-      __webpack_require__(64),
-      __webpack_require__(66),
-      __webpack_require__(67),
-      __webpack_require__(68),
-      __webpack_require__(69),
-      __webpack_require__(70)
-    ], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      require('./flickity'),
-      require('./drag'),
-      require('./prev-next-button'),
-      require('./page-dots'),
-      require('./player'),
-      require('./add-remove-cell'),
-      require('./lazyload')
-    );
-  }
-
-})( window, function factory( Flickity ) {
-  /*jshint strict: false*/
-  return Flickity;
-});
-
-
-/***/ }),
-/* 60 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;/**
- * matchesSelector v2.0.2
- * matchesSelector( element, '.selector' )
- * MIT license
- */
-
-/*jshint browser: true, strict: true, undef: true, unused: true */
-
-( function( window, factory ) {
-  /*global define: false, module: false */
-  'use strict';
-  // universal module definition
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
-				__WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory();
-  } else {
-    // browser global
-    window.matchesSelector = factory();
-  }
-
-}( window, function factory() {
-  'use strict';
-
-  var matchesMethod = ( function() {
-    var ElemProto = window.Element.prototype;
-    // check for the standard method name first
-    if ( ElemProto.matches ) {
-      return 'matches';
-    }
-    // check un-prefixed
-    if ( ElemProto.matchesSelector ) {
-      return 'matchesSelector';
-    }
-    // check vendor prefixes
-    var prefixes = [ 'webkit', 'moz', 'ms', 'o' ];
-
-    for ( var i=0; i < prefixes.length; i++ ) {
-      var prefix = prefixes[i];
-      var method = prefix + 'MatchesSelector';
-      if ( ElemProto[ method ] ) {
-        return method;
-      }
-    }
-  })();
-
-  return function matchesSelector( elem, selector ) {
-    return elem[ matchesMethod ]( selector );
-  };
-
-}));
-
-
-/***/ }),
-/* 61 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// Flickity.Cell
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(50)
-    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( getSize ) {
-      return factory( window, getSize );
-    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('get-size')
-    );
-  } else {
-    // browser global
-    window.Flickity = window.Flickity || {};
-    window.Flickity.Cell = factory(
-      window,
-      window.getSize
-    );
-  }
-
-}( window, function factory( window, getSize ) {
-
-'use strict';
-
-function Cell( elem, parent ) {
-  this.element = elem;
-  this.parent = parent;
-
-  this.create();
-}
-
-var proto = Cell.prototype;
-
-proto.create = function() {
-  this.element.style.position = 'absolute';
-  this.x = 0;
-  this.shift = 0;
-};
-
-proto.destroy = function() {
-  // reset style
-  this.element.style.position = '';
-  var side = this.parent.originSide;
-  this.element.style[ side ] = '';
-};
-
-proto.getSize = function() {
-  this.size = getSize( this.element );
-};
-
-proto.setPosition = function( x ) {
-  this.x = x;
-  this.updateTarget();
-  this.renderPosition( x );
-};
-
-// setDefaultTarget v1 method, backwards compatibility, remove in v3
-proto.updateTarget = proto.setDefaultTarget = function() {
-  var marginProperty = this.parent.originSide == 'left' ? 'marginLeft' : 'marginRight';
-  this.target = this.x + this.size[ marginProperty ] +
-    this.size.width * this.parent.cellAlign;
-};
-
-proto.renderPosition = function( x ) {
-  // render position of cell with in slider
-  var side = this.parent.originSide;
-  this.element.style[ side ] = this.parent.getPositionValue( x );
-};
-
-/**
- * @param {Integer} factor - 0, 1, or -1
-**/
-proto.wrapShift = function( shift ) {
-  this.shift = shift;
-  this.renderPosition( this.x + this.parent.slideableWidth * shift );
-};
-
-proto.remove = function() {
-  this.element.parentNode.removeChild( this.element );
-};
-
-return Cell;
-
-}));
-
-
-/***/ }),
-/* 62 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_RESULT__;// slide
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_FACTORY__ = (factory),
-				__WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ?
-				(__WEBPACK_AMD_DEFINE_FACTORY__.call(exports, __webpack_require__, exports, module)) :
-				__WEBPACK_AMD_DEFINE_FACTORY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory();
-  } else {
-    // browser global
-    window.Flickity = window.Flickity || {};
-    window.Flickity.Slide = factory();
-  }
-
-}( window, function factory() {
-'use strict';
-
-function Slide( parent ) {
-  this.parent = parent;
-  this.isOriginLeft = parent.originSide == 'left';
-  this.cells = [];
-  this.outerWidth = 0;
-  this.height = 0;
-}
-
-var proto = Slide.prototype;
-
-proto.addCell = function( cell ) {
-  this.cells.push( cell );
-  this.outerWidth += cell.size.outerWidth;
-  this.height = Math.max( cell.size.outerHeight, this.height );
-  // first cell stuff
-  if ( this.cells.length == 1 ) {
-    this.x = cell.x; // x comes from first cell
-    var beginMargin = this.isOriginLeft ? 'marginLeft' : 'marginRight';
-    this.firstMargin = cell.size[ beginMargin ];
-  }
-};
-
-proto.updateTarget = function() {
-  var endMargin = this.isOriginLeft ? 'marginRight' : 'marginLeft';
-  var lastCell = this.getLastCell();
-  var lastMargin = lastCell ? lastCell.size[ endMargin ] : 0;
-  var slideWidth = this.outerWidth - ( this.firstMargin + lastMargin );
-  this.target = this.x + this.firstMargin + slideWidth * this.parent.cellAlign;
-};
-
-proto.getLastCell = function() {
-  return this.cells[ this.cells.length - 1 ];
-};
-
-proto.select = function() {
-  this.changeSelectedClass('add');
-};
-
-proto.unselect = function() {
-  this.changeSelectedClass('remove');
-};
-
-proto.changeSelectedClass = function( method ) {
-  this.cells.forEach( function( cell ) {
-    cell.element.classList[ method ]('is-selected');
-  });
-};
-
-proto.getCellElements = function() {
-  return this.cells.map( function( cell ) {
-    return cell.element;
-  });
-};
-
-return Slide;
-
-}));
-
-
-/***/ }),
-/* 63 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// animate
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(47)
-    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( utils ) {
-      return factory( window, utils );
-    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('fizzy-ui-utils')
-    );
-  } else {
-    // browser global
-    window.Flickity = window.Flickity || {};
-    window.Flickity.animatePrototype = factory(
-      window,
-      window.fizzyUIUtils
-    );
-  }
-
-}( window, function factory( window, utils ) {
-
-'use strict';
-
-// -------------------------- requestAnimationFrame -------------------------- //
-
-// get rAF, prefixed, if present
-var requestAnimationFrame = window.requestAnimationFrame ||
-  window.webkitRequestAnimationFrame;
-
-// fallback to setTimeout
-var lastTime = 0;
-if ( !requestAnimationFrame )  {
-  requestAnimationFrame = function( callback ) {
-    var currTime = new Date().getTime();
-    var timeToCall = Math.max( 0, 16 - ( currTime - lastTime ) );
-    var id = setTimeout( callback, timeToCall );
-    lastTime = currTime + timeToCall;
-    return id;
-  };
-}
-
-// -------------------------- animate -------------------------- //
-
-var proto = {};
-
-proto.startAnimation = function() {
-  if ( this.isAnimating ) {
-    return;
-  }
-
-  this.isAnimating = true;
-  this.restingFrames = 0;
-  this.animate();
-};
-
-proto.animate = function() {
-  this.applyDragForce();
-  this.applySelectedAttraction();
-
-  var previousX = this.x;
-
-  this.integratePhysics();
-  this.positionSlider();
-  this.settle( previousX );
-  // animate next frame
-  if ( this.isAnimating ) {
-    var _this = this;
-    requestAnimationFrame( function animateFrame() {
-      _this.animate();
-    });
-  }
-};
-
-
-var transformProperty = ( function () {
-  var style = document.documentElement.style;
-  if ( typeof style.transform == 'string' ) {
-    return 'transform';
-  }
-  return 'WebkitTransform';
-})();
-
-proto.positionSlider = function() {
-  var x = this.x;
-  // wrap position around
-  if ( this.options.wrapAround && this.cells.length > 1 ) {
-    x = utils.modulo( x, this.slideableWidth );
-    x = x - this.slideableWidth;
-    this.shiftWrapCells( x );
-  }
-
-  x = x + this.cursorPosition;
-  // reverse if right-to-left and using transform
-  x = this.options.rightToLeft && transformProperty ? -x : x;
-  var value = this.getPositionValue( x );
-  // use 3D tranforms for hardware acceleration on iOS
-  // but use 2D when settled, for better font-rendering
-  this.slider.style[ transformProperty ] = this.isAnimating ?
-    'translate3d(' + value + ',0,0)' : 'translateX(' + value + ')';
-
-  // scroll event
-  var firstSlide = this.slides[0];
-  if ( firstSlide ) {
-    var positionX = -this.x - firstSlide.target;
-    var progress = positionX / this.slidesWidth;
-    this.dispatchEvent( 'scroll', null, [ progress, positionX ] );
-  }
-};
-
-proto.positionSliderAtSelected = function() {
-  if ( !this.cells.length ) {
-    return;
-  }
-  this.x = -this.selectedSlide.target;
-  this.positionSlider();
-};
-
-proto.getPositionValue = function( position ) {
-  if ( this.options.percentPosition ) {
-    // percent position, round to 2 digits, like 12.34%
-    return ( Math.round( ( position / this.size.innerWidth ) * 10000 ) * 0.01 )+ '%';
-  } else {
-    // pixel positioning
-    return Math.round( position ) + 'px';
-  }
-};
-
-proto.settle = function( previousX ) {
-  // keep track of frames where x hasn't moved
-  if ( !this.isPointerDown && Math.round( this.x * 100 ) == Math.round( previousX * 100 ) ) {
-    this.restingFrames++;
-  }
-  // stop animating if resting for 3 or more frames
-  if ( this.restingFrames > 2 ) {
-    this.isAnimating = false;
-    delete this.isFreeScrolling;
-    // render position with translateX when settled
-    this.positionSlider();
-    this.dispatchEvent('settle');
-  }
-};
-
-proto.shiftWrapCells = function( x ) {
-  // shift before cells
-  var beforeGap = this.cursorPosition + x;
-  this._shiftCells( this.beforeShiftCells, beforeGap, -1 );
-  // shift after cells
-  var afterGap = this.size.innerWidth - ( x + this.slideableWidth + this.cursorPosition );
-  this._shiftCells( this.afterShiftCells, afterGap, 1 );
-};
-
-proto._shiftCells = function( cells, gap, shift ) {
-  for ( var i=0; i < cells.length; i++ ) {
-    var cell = cells[i];
-    var cellShift = gap > 0 ? shift : 0;
-    cell.wrapShift( cellShift );
-    gap -= cell.size.outerWidth;
-  }
-};
-
-proto._unshiftCells = function( cells ) {
-  if ( !cells || !cells.length ) {
-    return;
-  }
-  for ( var i=0; i < cells.length; i++ ) {
-    cells[i].wrapShift( 0 );
-  }
-};
-
-// -------------------------- physics -------------------------- //
-
-proto.integratePhysics = function() {
-  this.x += this.velocity;
-  this.velocity *= this.getFrictionFactor();
-};
-
-proto.applyForce = function( force ) {
-  this.velocity += force;
-};
-
-proto.getFrictionFactor = function() {
-  return 1 - this.options[ this.isFreeScrolling ? 'freeScrollFriction' : 'friction' ];
-};
-
-proto.getRestingPosition = function() {
-  // my thanks to Steven Wittens, who simplified this math greatly
-  return this.x + this.velocity / ( 1 - this.getFrictionFactor() );
-};
-
-proto.applyDragForce = function() {
-  if ( !this.isPointerDown ) {
-    return;
-  }
-  // change the position to drag position by applying force
-  var dragVelocity = this.dragX - this.x;
-  var dragForce = dragVelocity - this.velocity;
-  this.applyForce( dragForce );
-};
-
-proto.applySelectedAttraction = function() {
-  // do not attract if pointer down or no cells
-  if ( this.isPointerDown || this.isFreeScrolling || !this.cells.length ) {
-    return;
-  }
-  var distance = this.selectedSlide.target * -1 - this.x;
-  var force = distance * this.options.selectedAttraction;
-  this.applyForce( force );
-};
-
-return proto;
-
-}));
-
-
-/***/ }),
-/* 64 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// drag
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(48),
-      __webpack_require__(65),
-      __webpack_require__(47)
-    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Flickity, Unidragger, utils ) {
-      return factory( window, Flickity, Unidragger, utils );
-    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('./flickity'),
-      require('unidragger'),
-      require('fizzy-ui-utils')
-    );
-  } else {
-    // browser global
-    window.Flickity = factory(
-      window,
-      window.Flickity,
-      window.Unidragger,
-      window.fizzyUIUtils
-    );
-  }
-
-}( window, function factory( window, Flickity, Unidragger, utils ) {
-
-'use strict';
-
-// ----- defaults ----- //
-
-utils.extend( Flickity.defaults, {
-  draggable: true,
-  dragThreshold: 3,
-});
-
-// ----- create ----- //
-
-Flickity.createMethods.push('_createDrag');
-
-// -------------------------- drag prototype -------------------------- //
-
-var proto = Flickity.prototype;
-utils.extend( proto, Unidragger.prototype );
-proto._touchActionValue = 'pan-y';
-
-// --------------------------  -------------------------- //
-
-var isTouch = 'createTouch' in document;
-var isTouchmoveScrollCanceled = false;
-
-proto._createDrag = function() {
-  this.on( 'activate', this.bindDrag );
-  this.on( 'uiChange', this._uiChangeDrag );
-  this.on( 'childUIPointerDown', this._childUIPointerDownDrag );
-  this.on( 'deactivate', this.unbindDrag );
-  // HACK - add seemingly innocuous handler to fix iOS 10 scroll behavior
-  // #457, RubaXa/Sortable#973
-  if ( isTouch && !isTouchmoveScrollCanceled ) {
-    window.addEventListener( 'touchmove', function() {});
-    isTouchmoveScrollCanceled = true;
-  }
-};
-
-proto.bindDrag = function() {
-  if ( !this.options.draggable || this.isDragBound ) {
-    return;
-  }
-  this.element.classList.add('is-draggable');
-  this.handles = [ this.viewport ];
-  this.bindHandles();
-  this.isDragBound = true;
-};
-
-proto.unbindDrag = function() {
-  if ( !this.isDragBound ) {
-    return;
-  }
-  this.element.classList.remove('is-draggable');
-  this.unbindHandles();
-  delete this.isDragBound;
-};
-
-proto._uiChangeDrag = function() {
-  delete this.isFreeScrolling;
-};
-
-proto._childUIPointerDownDrag = function( event ) {
-  event.preventDefault();
-  this.pointerDownFocus( event );
-};
-
-// -------------------------- pointer events -------------------------- //
-
-// nodes that have text fields
-var cursorNodes = {
-  TEXTAREA: true,
-  INPUT: true,
-  OPTION: true,
-};
-
-// input types that do not have text fields
-var clickTypes = {
-  radio: true,
-  checkbox: true,
-  button: true,
-  submit: true,
-  image: true,
-  file: true,
-};
-
-proto.pointerDown = function( event, pointer ) {
-  // dismiss inputs with text fields. #403, #404
-  var isCursorInput = cursorNodes[ event.target.nodeName ] &&
-    !clickTypes[ event.target.type ];
-  if ( isCursorInput ) {
-    // reset pointerDown logic
-    this.isPointerDown = false;
-    delete this.pointerIdentifier;
-    return;
-  }
-
-  this._dragPointerDown( event, pointer );
-
-  // kludge to blur focused inputs in dragger
-  var focused = document.activeElement;
-  if ( focused && focused.blur && focused != this.element &&
-    // do not blur body for IE9 & 10, #117
-    focused != document.body ) {
-    focused.blur();
-  }
-  this.pointerDownFocus( event );
-  // stop if it was moving
-  this.dragX = this.x;
-  this.viewport.classList.add('is-pointer-down');
-  // bind move and end events
-  this._bindPostStartEvents( event );
-  // track scrolling
-  this.pointerDownScroll = getScrollPosition();
-  window.addEventListener( 'scroll', this );
-
-  this.dispatchEvent( 'pointerDown', event, [ pointer ] );
-};
-
-proto.pointerDownFocus = function( event ) {
-  // focus element, if not touch, and its not an input or select
-  var canPointerDown = getCanPointerDown( event );
-  if ( !this.options.accessibility || canPointerDown ) {
-    return;
-  }
-  var prevScrollY = window.pageYOffset;
-  this.element.focus();
-  // hack to fix scroll jump after focus, #76
-  if ( window.pageYOffset != prevScrollY ) {
-    window.scrollTo( window.pageXOffset, prevScrollY );
-  }
-};
-
-var focusNodes = {
-  INPUT: true,
-  SELECT: true,
-};
-
-function getCanPointerDown( event ) {
-  var isTouchStart = event.type == 'touchstart';
-  var isTouchPointer = event.pointerType == 'touch';
-  var isFocusNode = focusNodes[ event.target.nodeName ];
-  return isTouchStart || isTouchPointer || isFocusNode;
-}
-
-proto.canPreventDefaultOnPointerDown = function( event ) {
-  // prevent default, unless touchstart or input
-  var canPointerDown = getCanPointerDown( event );
-  return !canPointerDown;
-};
-
-// ----- move ----- //
-
-proto.hasDragStarted = function( moveVector ) {
-  return Math.abs( moveVector.x ) > this.options.dragThreshold;
-};
-
-// ----- up ----- //
-
-proto.pointerUp = function( event, pointer ) {
-  delete this.isTouchScrolling;
-  this.viewport.classList.remove('is-pointer-down');
-  this.dispatchEvent( 'pointerUp', event, [ pointer ] );
-  this._dragPointerUp( event, pointer );
-};
-
-proto.pointerDone = function() {
-  window.removeEventListener( 'scroll', this );
-  delete this.pointerDownScroll;
-};
-
-// -------------------------- dragging -------------------------- //
-
-proto.dragStart = function( event, pointer ) {
-  this.dragStartPosition = this.x;
-  this.startAnimation();
-  window.removeEventListener( 'scroll', this );
-  this.dispatchEvent( 'dragStart', event, [ pointer ] );
-};
-
-proto.pointerMove = function( event, pointer ) {
-  var moveVector = this._dragPointerMove( event, pointer );
-  this.dispatchEvent( 'pointerMove', event, [ pointer, moveVector ] );
-  this._dragMove( event, pointer, moveVector );
-};
-
-proto.dragMove = function( event, pointer, moveVector ) {
-  event.preventDefault();
-
-  this.previousDragX = this.dragX;
-  // reverse if right-to-left
-  var direction = this.options.rightToLeft ? -1 : 1;
-  var dragX = this.dragStartPosition + moveVector.x * direction;
-
-  if ( !this.options.wrapAround && this.slides.length ) {
-    // slow drag
-    var originBound = Math.max( -this.slides[0].target, this.dragStartPosition );
-    dragX = dragX > originBound ? ( dragX + originBound ) * 0.5 : dragX;
-    var endBound = Math.min( -this.getLastSlide().target, this.dragStartPosition );
-    dragX = dragX < endBound ? ( dragX + endBound ) * 0.5 : dragX;
-  }
-
-  this.dragX = dragX;
-
-  this.dragMoveTime = new Date();
-  this.dispatchEvent( 'dragMove', event, [ pointer, moveVector ] );
-};
-
-proto.dragEnd = function( event, pointer ) {
-  if ( this.options.freeScroll ) {
-    this.isFreeScrolling = true;
-  }
-  // set selectedIndex based on where flick will end up
-  var index = this.dragEndRestingSelect();
-
-  if ( this.options.freeScroll && !this.options.wrapAround ) {
-    // if free-scroll & not wrap around
-    // do not free-scroll if going outside of bounding slides
-    // so bounding slides can attract slider, and keep it in bounds
-    var restingX = this.getRestingPosition();
-    this.isFreeScrolling = -restingX > this.slides[0].target &&
-      -restingX < this.getLastSlide().target;
-  } else if ( !this.options.freeScroll && index == this.selectedIndex ) {
-    // boost selection if selected index has not changed
-    index += this.dragEndBoostSelect();
-  }
-  delete this.previousDragX;
-  // apply selection
-  // TODO refactor this, selecting here feels weird
-  // HACK, set flag so dragging stays in correct direction
-  this.isDragSelect = this.options.wrapAround;
-  this.select( index );
-  delete this.isDragSelect;
-  this.dispatchEvent( 'dragEnd', event, [ pointer ] );
-};
-
-proto.dragEndRestingSelect = function() {
-  var restingX = this.getRestingPosition();
-  // how far away from selected slide
-  var distance = Math.abs( this.getSlideDistance( -restingX, this.selectedIndex ) );
-  // get closet resting going up and going down
-  var positiveResting = this._getClosestResting( restingX, distance, 1 );
-  var negativeResting = this._getClosestResting( restingX, distance, -1 );
-  // use closer resting for wrap-around
-  var index = positiveResting.distance < negativeResting.distance ?
-    positiveResting.index : negativeResting.index;
-  return index;
-};
-
-/**
- * given resting X and distance to selected cell
- * get the distance and index of the closest cell
- * @param {Number} restingX - estimated post-flick resting position
- * @param {Number} distance - distance to selected cell
- * @param {Integer} increment - +1 or -1, going up or down
- * @returns {Object} - { distance: {Number}, index: {Integer} }
- */
-proto._getClosestResting = function( restingX, distance, increment ) {
-  var index = this.selectedIndex;
-  var minDistance = Infinity;
-  var condition = this.options.contain && !this.options.wrapAround ?
-    // if contain, keep going if distance is equal to minDistance
-    function( d, md ) { return d <= md; } : function( d, md ) { return d < md; };
-  while ( condition( distance, minDistance ) ) {
-    // measure distance to next cell
-    index += increment;
-    minDistance = distance;
-    distance = this.getSlideDistance( -restingX, index );
-    if ( distance === null ) {
-      break;
-    }
-    distance = Math.abs( distance );
-  }
-  return {
-    distance: minDistance,
-    // selected was previous index
-    index: index - increment
-  };
-};
-
-/**
- * measure distance between x and a slide target
- * @param {Number} x
- * @param {Integer} index - slide index
- */
-proto.getSlideDistance = function( x, index ) {
-  var len = this.slides.length;
-  // wrap around if at least 2 slides
-  var isWrapAround = this.options.wrapAround && len > 1;
-  var slideIndex = isWrapAround ? utils.modulo( index, len ) : index;
-  var slide = this.slides[ slideIndex ];
-  if ( !slide ) {
-    return null;
-  }
-  // add distance for wrap-around slides
-  var wrap = isWrapAround ? this.slideableWidth * Math.floor( index / len ) : 0;
-  return x - ( slide.target + wrap );
-};
-
-proto.dragEndBoostSelect = function() {
-  // do not boost if no previousDragX or dragMoveTime
-  if ( this.previousDragX === undefined || !this.dragMoveTime ||
-    // or if drag was held for 100 ms
-    new Date() - this.dragMoveTime > 100 ) {
-    return 0;
-  }
-
-  var distance = this.getSlideDistance( -this.dragX, this.selectedIndex );
-  var delta = this.previousDragX - this.dragX;
-  if ( distance > 0 && delta > 0 ) {
-    // boost to next if moving towards the right, and positive velocity
-    return 1;
-  } else if ( distance < 0 && delta < 0 ) {
-    // boost to previous if moving towards the left, and negative velocity
-    return -1;
-  }
-  return 0;
-};
-
-// ----- staticClick ----- //
-
-proto.staticClick = function( event, pointer ) {
-  // get clickedCell, if cell was clicked
-  var clickedCell = this.getParentCell( event.target );
-  var cellElem = clickedCell && clickedCell.element;
-  var cellIndex = clickedCell && this.cells.indexOf( clickedCell );
-  this.dispatchEvent( 'staticClick', event, [ pointer, cellElem, cellIndex ] );
-};
-
-// ----- scroll ----- //
-
-proto.onscroll = function() {
-  var scroll = getScrollPosition();
-  var scrollMoveX = this.pointerDownScroll.x - scroll.x;
-  var scrollMoveY = this.pointerDownScroll.y - scroll.y;
-  // cancel click/tap if scroll is too much
-  if ( Math.abs( scrollMoveX ) > 3 || Math.abs( scrollMoveY ) > 3 ) {
-    this._pointerDone();
-  }
-};
-
-// ----- utils ----- //
-
-function getScrollPosition() {
-  return {
-    x: window.pageXOffset,
-    y: window.pageYOffset
-  };
-}
-
-// -----  ----- //
-
-return Flickity;
-
-}));
-
-
-/***/ }),
-/* 65 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;/*!
- * Unidragger v2.2.3
- * Draggable base class
- * MIT license
- */
-
-/*jshint browser: true, unused: true, undef: true, strict: true */
-
-( function( window, factory ) {
-  // universal module definition
-  /*jshint strict: false */ /*globals define, module, require */
-
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(51)
-    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Unipointer ) {
-      return factory( window, Unipointer );
-    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('unipointer')
-    );
-  } else {
-    // browser global
-    window.Unidragger = factory(
-      window,
-      window.Unipointer
-    );
-  }
-
-}( window, function factory( window, Unipointer ) {
-
-'use strict';
-
-// -------------------------- Unidragger -------------------------- //
-
-function Unidragger() {}
-
-// inherit Unipointer & EvEmitter
-var proto = Unidragger.prototype = Object.create( Unipointer.prototype );
-
-// ----- bind start ----- //
-
-proto.bindHandles = function() {
-  this._bindHandles( true );
-};
-
-proto.unbindHandles = function() {
-  this._bindHandles( false );
-};
-
-/**
- * works as unbinder, as you can .bindHandles( false ) to unbind
- * @param {Boolean} isBind - will unbind if falsey
- */
-proto._bindHandles = function( isBind ) {
-  // munge isBind, default to true
-  isBind = isBind === undefined ? true : !!isBind;
-  // bind each handle
-  var bindMethod = isBind ? 'addEventListener' : 'removeEventListener';
-  for ( var i=0; i < this.handles.length; i++ ) {
-    var handle = this.handles[i];
-    this._bindStartEvent( handle, isBind );
-    handle[ bindMethod ]( 'click', this );
-    // touch-action: none to override browser touch gestures
-    // metafizzy/flickity#540
-    if ( window.PointerEvent ) {
-      handle.style.touchAction = isBind ? this._touchActionValue : '';
-    }
-  }
-};
-
-// prototype so it can be overwriteable by Flickity
-proto._touchActionValue = 'none';
-
-// ----- start event ----- //
-
-/**
- * pointer start
- * @param {Event} event
- * @param {Event or Touch} pointer
- */
-proto.pointerDown = function( event, pointer ) {
-  // dismiss range sliders
-  if ( event.target.nodeName == 'INPUT' && event.target.type == 'range' ) {
-    // reset pointerDown logic
-    this.isPointerDown = false;
-    delete this.pointerIdentifier;
-    return;
-  }
-
-  this._dragPointerDown( event, pointer );
-  // kludge to blur focused inputs in dragger
-  var focused = document.activeElement;
-  if ( focused && focused.blur ) {
-    focused.blur();
-  }
-  // bind move and end events
-  this._bindPostStartEvents( event );
-  this.emitEvent( 'pointerDown', [ event, pointer ] );
-};
-
-// base pointer down logic
-proto._dragPointerDown = function( event, pointer ) {
-  // track to see when dragging starts
-  this.pointerDownPoint = Unipointer.getPointerPoint( pointer );
-
-  var canPreventDefault = this.canPreventDefaultOnPointerDown( event, pointer );
-  if ( canPreventDefault ) {
-    event.preventDefault();
-  }
-};
-
-// overwriteable method so Flickity can prevent for scrolling
-proto.canPreventDefaultOnPointerDown = function( event ) {
-  // prevent default, unless touchstart or <select>
-  return event.target.nodeName != 'SELECT';
-};
-
-// ----- move event ----- //
-
-/**
- * drag move
- * @param {Event} event
- * @param {Event or Touch} pointer
- */
-proto.pointerMove = function( event, pointer ) {
-  var moveVector = this._dragPointerMove( event, pointer );
-  this.emitEvent( 'pointerMove', [ event, pointer, moveVector ] );
-  this._dragMove( event, pointer, moveVector );
-};
-
-// base pointer move logic
-proto._dragPointerMove = function( event, pointer ) {
-  var movePoint = Unipointer.getPointerPoint( pointer );
-  var moveVector = {
-    x: movePoint.x - this.pointerDownPoint.x,
-    y: movePoint.y - this.pointerDownPoint.y
-  };
-  // start drag if pointer has moved far enough to start drag
-  if ( !this.isDragging && this.hasDragStarted( moveVector ) ) {
-    this._dragStart( event, pointer );
-  }
-  return moveVector;
-};
-
-// condition if pointer has moved far enough to start drag
-proto.hasDragStarted = function( moveVector ) {
-  return Math.abs( moveVector.x ) > 3 || Math.abs( moveVector.y ) > 3;
-};
-
-
-// ----- end event ----- //
-
-/**
- * pointer up
- * @param {Event} event
- * @param {Event or Touch} pointer
- */
-proto.pointerUp = function( event, pointer ) {
-  this.emitEvent( 'pointerUp', [ event, pointer ] );
-  this._dragPointerUp( event, pointer );
-};
-
-proto._dragPointerUp = function( event, pointer ) {
-  if ( this.isDragging ) {
-    this._dragEnd( event, pointer );
-  } else {
-    // pointer didn't move enough for drag to start
-    this._staticClick( event, pointer );
-  }
-};
-
-// -------------------------- drag -------------------------- //
-
-// dragStart
-proto._dragStart = function( event, pointer ) {
-  this.isDragging = true;
-  this.dragStartPoint = Unipointer.getPointerPoint( pointer );
-  // prevent clicks
-  this.isPreventingClicks = true;
-
-  this.dragStart( event, pointer );
-};
-
-proto.dragStart = function( event, pointer ) {
-  this.emitEvent( 'dragStart', [ event, pointer ] );
-};
-
-// dragMove
-proto._dragMove = function( event, pointer, moveVector ) {
-  // do not drag if not dragging yet
-  if ( !this.isDragging ) {
-    return;
-  }
-
-  this.dragMove( event, pointer, moveVector );
-};
-
-proto.dragMove = function( event, pointer, moveVector ) {
-  event.preventDefault();
-  this.emitEvent( 'dragMove', [ event, pointer, moveVector ] );
-};
-
-// dragEnd
-proto._dragEnd = function( event, pointer ) {
-  // set flags
-  this.isDragging = false;
-  // re-enable clicking async
-  setTimeout( function() {
-    delete this.isPreventingClicks;
-  }.bind( this ) );
-
-  this.dragEnd( event, pointer );
-};
-
-proto.dragEnd = function( event, pointer ) {
-  this.emitEvent( 'dragEnd', [ event, pointer ] );
-};
-
-// ----- onclick ----- //
-
-// handle all clicks and prevent clicks when dragging
-proto.onclick = function( event ) {
-  if ( this.isPreventingClicks ) {
-    event.preventDefault();
-  }
-};
-
-// ----- staticClick ----- //
-
-// triggered after pointer down & up with no/tiny movement
-proto._staticClick = function( event, pointer ) {
-  // ignore emulated mouse up clicks
-  if ( this.isIgnoringMouseUp && event.type == 'mouseup' ) {
-    return;
-  }
-
-  // allow click in <input>s and <textarea>s
-  var nodeName = event.target.nodeName;
-  if ( nodeName == 'INPUT' || nodeName == 'TEXTAREA' ) {
-    event.target.focus();
-  }
-  this.staticClick( event, pointer );
-
-  // set flag for emulated clicks 300ms after touchend
-  if ( event.type != 'mouseup' ) {
-    this.isIgnoringMouseUp = true;
-    // reset flag after 300ms
-    setTimeout( function() {
-      delete this.isIgnoringMouseUp;
-    }.bind( this ), 400 );
-  }
-};
-
-proto.staticClick = function( event, pointer ) {
-  this.emitEvent( 'staticClick', [ event, pointer ] );
-};
-
-// ----- utils ----- //
-
-Unidragger.getPointerPoint = Unipointer.getPointerPoint;
-
-// -----  ----- //
-
-return Unidragger;
-
-}));
-
-
-/***/ }),
-/* 66 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// prev/next buttons
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(48),
-      __webpack_require__(52),
-      __webpack_require__(47)
-    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Flickity, TapListener, utils ) {
-      return factory( window, Flickity, TapListener, utils );
-    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('./flickity'),
-      require('tap-listener'),
-      require('fizzy-ui-utils')
-    );
-  } else {
-    // browser global
-    factory(
-      window,
-      window.Flickity,
-      window.TapListener,
-      window.fizzyUIUtils
-    );
-  }
-
-}( window, function factory( window, Flickity, TapListener, utils ) {
-'use strict';
-
-var svgURI = 'http://www.w3.org/2000/svg';
-
-// -------------------------- PrevNextButton -------------------------- //
-
-function PrevNextButton( direction, parent ) {
-  this.direction = direction;
-  this.parent = parent;
-  this._create();
-}
-
-PrevNextButton.prototype = new TapListener();
-
-PrevNextButton.prototype._create = function() {
-  // properties
-  this.isEnabled = true;
-  this.isPrevious = this.direction == -1;
-  var leftDirection = this.parent.options.rightToLeft ? 1 : -1;
-  this.isLeft = this.direction == leftDirection;
-
-  var element = this.element = document.createElement('button');
-  element.className = 'flickity-prev-next-button';
-  element.className += this.isPrevious ? ' previous' : ' next';
-  // prevent button from submitting form http://stackoverflow.com/a/10836076/182183
-  element.setAttribute( 'type', 'button' );
-  // init as disabled
-  this.disable();
-
-  element.setAttribute( 'aria-label', this.isPrevious ? 'previous' : 'next' );
-
-  // create arrow
-  var svg = this.createSVG();
-  element.appendChild( svg );
-  // events
-  this.on( 'tap', this.onTap );
-  this.parent.on( 'select', this.update.bind( this ) );
-  this.on( 'pointerDown', this.parent.childUIPointerDown.bind( this.parent ) );
-};
-
-PrevNextButton.prototype.activate = function() {
-  this.bindTap( this.element );
-  // click events from keyboard
-  this.element.addEventListener( 'click', this );
-  // add to DOM
-  this.parent.element.appendChild( this.element );
-};
-
-PrevNextButton.prototype.deactivate = function() {
-  // remove from DOM
-  this.parent.element.removeChild( this.element );
-  // do regular TapListener destroy
-  TapListener.prototype.destroy.call( this );
-  // click events from keyboard
-  this.element.removeEventListener( 'click', this );
-};
-
-PrevNextButton.prototype.createSVG = function() {
-  var svg = document.createElementNS( svgURI, 'svg');
-  svg.setAttribute( 'viewBox', '0 0 100 100' );
-  var path = document.createElementNS( svgURI, 'path');
-  var pathMovements = getArrowMovements( this.parent.options.arrowShape );
-  path.setAttribute( 'd', pathMovements );
-  path.setAttribute( 'class', 'arrow' );
-  // rotate arrow
-  if ( !this.isLeft ) {
-    path.setAttribute( 'transform', 'translate(100, 100) rotate(180) ' );
-  }
-  svg.appendChild( path );
-  return svg;
-};
-
-// get SVG path movmement
-function getArrowMovements( shape ) {
-  // use shape as movement if string
-  if ( typeof shape == 'string' ) {
-    return shape;
-  }
-  // create movement string
-  return 'M ' + shape.x0 + ',50' +
-    ' L ' + shape.x1 + ',' + ( shape.y1 + 50 ) +
-    ' L ' + shape.x2 + ',' + ( shape.y2 + 50 ) +
-    ' L ' + shape.x3 + ',50 ' +
-    ' L ' + shape.x2 + ',' + ( 50 - shape.y2 ) +
-    ' L ' + shape.x1 + ',' + ( 50 - shape.y1 ) +
-    ' Z';
-}
-
-PrevNextButton.prototype.onTap = function() {
-  if ( !this.isEnabled ) {
-    return;
-  }
-  this.parent.uiChange();
-  var method = this.isPrevious ? 'previous' : 'next';
-  this.parent[ method ]();
-};
-
-PrevNextButton.prototype.handleEvent = utils.handleEvent;
-
-PrevNextButton.prototype.onclick = function() {
-  // only allow clicks from keyboard
-  var focused = document.activeElement;
-  if ( focused && focused == this.element ) {
-    this.onTap();
-  }
-};
-
-// -----  ----- //
-
-PrevNextButton.prototype.enable = function() {
-  if ( this.isEnabled ) {
-    return;
-  }
-  this.element.disabled = false;
-  this.isEnabled = true;
-};
-
-PrevNextButton.prototype.disable = function() {
-  if ( !this.isEnabled ) {
-    return;
-  }
-  this.element.disabled = true;
-  this.isEnabled = false;
-};
-
-PrevNextButton.prototype.update = function() {
-  // index of first or last slide, if previous or next
-  var slides = this.parent.slides;
-  // enable is wrapAround and at least 2 slides
-  if ( this.parent.options.wrapAround && slides.length > 1 ) {
-    this.enable();
-    return;
-  }
-  var lastIndex = slides.length ? slides.length - 1 : 0;
-  var boundIndex = this.isPrevious ? 0 : lastIndex;
-  var method = this.parent.selectedIndex == boundIndex ? 'disable' : 'enable';
-  this[ method ]();
-};
-
-PrevNextButton.prototype.destroy = function() {
-  this.deactivate();
-};
-
-// -------------------------- Flickity prototype -------------------------- //
-
-utils.extend( Flickity.defaults, {
-  prevNextButtons: true,
-  arrowShape: {
-    x0: 10,
-    x1: 60, y1: 50,
-    x2: 70, y2: 40,
-    x3: 30
-  }
-});
-
-Flickity.createMethods.push('_createPrevNextButtons');
-var proto = Flickity.prototype;
-
-proto._createPrevNextButtons = function() {
-  if ( !this.options.prevNextButtons ) {
-    return;
-  }
-
-  this.prevButton = new PrevNextButton( -1, this );
-  this.nextButton = new PrevNextButton( 1, this );
-
-  this.on( 'activate', this.activatePrevNextButtons );
-};
-
-proto.activatePrevNextButtons = function() {
-  this.prevButton.activate();
-  this.nextButton.activate();
-  this.on( 'deactivate', this.deactivatePrevNextButtons );
-};
-
-proto.deactivatePrevNextButtons = function() {
-  this.prevButton.deactivate();
-  this.nextButton.deactivate();
-  this.off( 'deactivate', this.deactivatePrevNextButtons );
-};
-
-// --------------------------  -------------------------- //
-
-Flickity.PrevNextButton = PrevNextButton;
-
-return Flickity;
-
-}));
-
-
-/***/ }),
-/* 67 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// page dots
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(48),
-      __webpack_require__(52),
-      __webpack_require__(47)
-    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Flickity, TapListener, utils ) {
-      return factory( window, Flickity, TapListener, utils );
-    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('./flickity'),
-      require('tap-listener'),
-      require('fizzy-ui-utils')
-    );
-  } else {
-    // browser global
-    factory(
-      window,
-      window.Flickity,
-      window.TapListener,
-      window.fizzyUIUtils
-    );
-  }
-
-}( window, function factory( window, Flickity, TapListener, utils ) {
-
-// -------------------------- PageDots -------------------------- //
-
-'use strict';
-
-function PageDots( parent ) {
-  this.parent = parent;
-  this._create();
-}
-
-PageDots.prototype = new TapListener();
-
-PageDots.prototype._create = function() {
-  // create holder element
-  this.holder = document.createElement('ol');
-  this.holder.className = 'flickity-page-dots';
-  // create dots, array of elements
-  this.dots = [];
-  // events
-  this.on( 'tap', this.onTap );
-  this.on( 'pointerDown', this.parent.childUIPointerDown.bind( this.parent ) );
-};
-
-PageDots.prototype.activate = function() {
-  this.setDots();
-  this.bindTap( this.holder );
-  // add to DOM
-  this.parent.element.appendChild( this.holder );
-};
-
-PageDots.prototype.deactivate = function() {
-  // remove from DOM
-  this.parent.element.removeChild( this.holder );
-  TapListener.prototype.destroy.call( this );
-};
-
-PageDots.prototype.setDots = function() {
-  // get difference between number of slides and number of dots
-  var delta = this.parent.slides.length - this.dots.length;
-  if ( delta > 0 ) {
-    this.addDots( delta );
-  } else if ( delta < 0 ) {
-    this.removeDots( -delta );
-  }
-};
-
-PageDots.prototype.addDots = function( count ) {
-  var fragment = document.createDocumentFragment();
-  var newDots = [];
-  while ( count ) {
-    var dot = document.createElement('li');
-    dot.className = 'dot';
-    fragment.appendChild( dot );
-    newDots.push( dot );
-    count--;
-  }
-  this.holder.appendChild( fragment );
-  this.dots = this.dots.concat( newDots );
-};
-
-PageDots.prototype.removeDots = function( count ) {
-  // remove from this.dots collection
-  var removeDots = this.dots.splice( this.dots.length - count, count );
-  // remove from DOM
-  removeDots.forEach( function( dot ) {
-    this.holder.removeChild( dot );
-  }, this );
-};
-
-PageDots.prototype.updateSelected = function() {
-  // remove selected class on previous
-  if ( this.selectedDot ) {
-    this.selectedDot.className = 'dot';
-  }
-  // don't proceed if no dots
-  if ( !this.dots.length ) {
-    return;
-  }
-  this.selectedDot = this.dots[ this.parent.selectedIndex ];
-  this.selectedDot.className = 'dot is-selected';
-};
-
-PageDots.prototype.onTap = function( event ) {
-  var target = event.target;
-  // only care about dot clicks
-  if ( target.nodeName != 'LI' ) {
-    return;
-  }
-
-  this.parent.uiChange();
-  var index = this.dots.indexOf( target );
-  this.parent.select( index );
-};
-
-PageDots.prototype.destroy = function() {
-  this.deactivate();
-};
-
-Flickity.PageDots = PageDots;
-
-// -------------------------- Flickity -------------------------- //
-
-utils.extend( Flickity.defaults, {
-  pageDots: true
-});
-
-Flickity.createMethods.push('_createPageDots');
-
-var proto = Flickity.prototype;
-
-proto._createPageDots = function() {
-  if ( !this.options.pageDots ) {
-    return;
-  }
-  this.pageDots = new PageDots( this );
-  // events
-  this.on( 'activate', this.activatePageDots );
-  this.on( 'select', this.updateSelectedPageDots );
-  this.on( 'cellChange', this.updatePageDots );
-  this.on( 'resize', this.updatePageDots );
-  this.on( 'deactivate', this.deactivatePageDots );
-};
-
-proto.activatePageDots = function() {
-  this.pageDots.activate();
-};
-
-proto.updateSelectedPageDots = function() {
-  this.pageDots.updateSelected();
-};
-
-proto.updatePageDots = function() {
-  this.pageDots.setDots();
-};
-
-proto.deactivatePageDots = function() {
-  this.pageDots.deactivate();
-};
-
-// -----  ----- //
-
-Flickity.PageDots = PageDots;
-
-return Flickity;
-
-}));
-
-
-/***/ }),
-/* 68 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// player & autoPlay
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(49),
-      __webpack_require__(47),
-      __webpack_require__(48)
-    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( EvEmitter, utils, Flickity ) {
-      return factory( EvEmitter, utils, Flickity );
-    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      require('ev-emitter'),
-      require('fizzy-ui-utils'),
-      require('./flickity')
-    );
-  } else {
-    // browser global
-    factory(
-      window.EvEmitter,
-      window.fizzyUIUtils,
-      window.Flickity
-    );
-  }
-
-}( window, function factory( EvEmitter, utils, Flickity ) {
-
-'use strict';
-
-// -------------------------- Page Visibility -------------------------- //
-// https://developer.mozilla.org/en-US/docs/Web/Guide/User_experience/Using_the_Page_Visibility_API
-
-var hiddenProperty, visibilityEvent;
-if ( 'hidden' in document ) {
-  hiddenProperty = 'hidden';
-  visibilityEvent = 'visibilitychange';
-} else if ( 'webkitHidden' in document ) {
-  hiddenProperty = 'webkitHidden';
-  visibilityEvent = 'webkitvisibilitychange';
-}
-
-// -------------------------- Player -------------------------- //
-
-function Player( parent ) {
-  this.parent = parent;
-  this.state = 'stopped';
-  // visibility change event handler
-  if ( visibilityEvent ) {
-    this.onVisibilityChange = function() {
-      this.visibilityChange();
-    }.bind( this );
-    this.onVisibilityPlay = function() {
-      this.visibilityPlay();
-    }.bind( this );
-  }
-}
-
-Player.prototype = Object.create( EvEmitter.prototype );
-
-// start play
-Player.prototype.play = function() {
-  if ( this.state == 'playing' ) {
-    return;
-  }
-  // do not play if page is hidden, start playing when page is visible
-  var isPageHidden = document[ hiddenProperty ];
-  if ( visibilityEvent && isPageHidden ) {
-    document.addEventListener( visibilityEvent, this.onVisibilityPlay );
-    return;
-  }
-
-  this.state = 'playing';
-  // listen to visibility change
-  if ( visibilityEvent ) {
-    document.addEventListener( visibilityEvent, this.onVisibilityChange );
-  }
-  // start ticking
-  this.tick();
-};
-
-Player.prototype.tick = function() {
-  // do not tick if not playing
-  if ( this.state != 'playing' ) {
-    return;
-  }
-
-  var time = this.parent.options.autoPlay;
-  // default to 3 seconds
-  time = typeof time == 'number' ? time : 3000;
-  var _this = this;
-  // HACK: reset ticks if stopped and started within interval
-  this.clear();
-  this.timeout = setTimeout( function() {
-    _this.parent.next( true );
-    _this.tick();
-  }, time );
-};
-
-Player.prototype.stop = function() {
-  this.state = 'stopped';
-  this.clear();
-  // remove visibility change event
-  if ( visibilityEvent ) {
-    document.removeEventListener( visibilityEvent, this.onVisibilityChange );
-  }
-};
-
-Player.prototype.clear = function() {
-  clearTimeout( this.timeout );
-};
-
-Player.prototype.pause = function() {
-  if ( this.state == 'playing' ) {
-    this.state = 'paused';
-    this.clear();
-  }
-};
-
-Player.prototype.unpause = function() {
-  // re-start play if paused
-  if ( this.state == 'paused' ) {
-    this.play();
-  }
-};
-
-// pause if page visibility is hidden, unpause if visible
-Player.prototype.visibilityChange = function() {
-  var isPageHidden = document[ hiddenProperty ];
-  this[ isPageHidden ? 'pause' : 'unpause' ]();
-};
-
-Player.prototype.visibilityPlay = function() {
-  this.play();
-  document.removeEventListener( visibilityEvent, this.onVisibilityPlay );
-};
-
-// -------------------------- Flickity -------------------------- //
-
-utils.extend( Flickity.defaults, {
-  pauseAutoPlayOnHover: true
-});
-
-Flickity.createMethods.push('_createPlayer');
-var proto = Flickity.prototype;
-
-proto._createPlayer = function() {
-  this.player = new Player( this );
-
-  this.on( 'activate', this.activatePlayer );
-  this.on( 'uiChange', this.stopPlayer );
-  this.on( 'pointerDown', this.stopPlayer );
-  this.on( 'deactivate', this.deactivatePlayer );
-};
-
-proto.activatePlayer = function() {
-  if ( !this.options.autoPlay ) {
-    return;
-  }
-  this.player.play();
-  this.element.addEventListener( 'mouseenter', this );
-};
-
-// Player API, don't hate the ... thanks I know where the door is
-
-proto.playPlayer = function() {
-  this.player.play();
-};
-
-proto.stopPlayer = function() {
-  this.player.stop();
-};
-
-proto.pausePlayer = function() {
-  this.player.pause();
-};
-
-proto.unpausePlayer = function() {
-  this.player.unpause();
-};
-
-proto.deactivatePlayer = function() {
-  this.player.stop();
-  this.element.removeEventListener( 'mouseenter', this );
-};
-
-// ----- mouseenter/leave ----- //
-
-// pause auto-play on hover
-proto.onmouseenter = function() {
-  if ( !this.options.pauseAutoPlayOnHover ) {
-    return;
-  }
-  this.player.pause();
-  this.element.addEventListener( 'mouseleave', this );
-};
-
-// resume auto-play on hover off
-proto.onmouseleave = function() {
-  this.player.unpause();
-  this.element.removeEventListener( 'mouseleave', this );
-};
-
-// -----  ----- //
-
-Flickity.Player = Player;
-
-return Flickity;
-
-}));
-
-
-/***/ }),
-/* 69 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// add, remove cell
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(48),
-      __webpack_require__(47)
-    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Flickity, utils ) {
-      return factory( window, Flickity, utils );
-    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('./flickity'),
-      require('fizzy-ui-utils')
-    );
-  } else {
-    // browser global
-    factory(
-      window,
-      window.Flickity,
-      window.fizzyUIUtils
-    );
-  }
-
-}( window, function factory( window, Flickity, utils ) {
-
-'use strict';
-
-// append cells to a document fragment
-function getCellsFragment( cells ) {
-  var fragment = document.createDocumentFragment();
-  cells.forEach( function( cell ) {
-    fragment.appendChild( cell.element );
-  });
-  return fragment;
-}
-
-// -------------------------- add/remove cell prototype -------------------------- //
-
-var proto = Flickity.prototype;
-
-/**
- * Insert, prepend, or append cells
- * @param {Element, Array, NodeList} elems
- * @param {Integer} index
- */
-proto.insert = function( elems, index ) {
-  var cells = this._makeCells( elems );
-  if ( !cells || !cells.length ) {
-    return;
-  }
-  var len = this.cells.length;
-  // default to append
-  index = index === undefined ? len : index;
-  // add cells with document fragment
-  var fragment = getCellsFragment( cells );
-  // append to slider
-  var isAppend = index == len;
-  if ( isAppend ) {
-    this.slider.appendChild( fragment );
-  } else {
-    var insertCellElement = this.cells[ index ].element;
-    this.slider.insertBefore( fragment, insertCellElement );
-  }
-  // add to this.cells
-  if ( index === 0 ) {
-    // prepend, add to start
-    this.cells = cells.concat( this.cells );
-  } else if ( isAppend ) {
-    // append, add to end
-    this.cells = this.cells.concat( cells );
-  } else {
-    // insert in this.cells
-    var endCells = this.cells.splice( index, len - index );
-    this.cells = this.cells.concat( cells ).concat( endCells );
-  }
-
-  this._sizeCells( cells );
-
-  var selectedIndexDelta = index > this.selectedIndex ? 0 : cells.length;
-  this._cellAddedRemoved( index, selectedIndexDelta );
-};
-
-proto.append = function( elems ) {
-  this.insert( elems, this.cells.length );
-};
-
-proto.prepend = function( elems ) {
-  this.insert( elems, 0 );
-};
-
-/**
- * Remove cells
- * @param {Element, Array, NodeList} elems
- */
-proto.remove = function( elems ) {
-  var cells = this.getCells( elems );
-  var selectedIndexDelta = 0;
-  var len = cells.length;
-  var i, cell;
-  // calculate selectedIndexDelta, easier if done in seperate loop
-  for ( i=0; i < len; i++ ) {
-    cell = cells[i];
-    var wasBefore = this.cells.indexOf( cell ) < this.selectedIndex;
-    selectedIndexDelta -= wasBefore ? 1 : 0;
-  }
-
-  for ( i=0; i < len; i++ ) {
-    cell = cells[i];
-    cell.remove();
-    // remove item from collection
-    utils.removeFrom( this.cells, cell );
-  }
-
-  if ( cells.length ) {
-    // update stuff
-    this._cellAddedRemoved( 0, selectedIndexDelta );
-  }
-};
-
-// updates when cells are added or removed
-proto._cellAddedRemoved = function( changedCellIndex, selectedIndexDelta ) {
-  // TODO this math isn't perfect with grouped slides
-  selectedIndexDelta = selectedIndexDelta || 0;
-  this.selectedIndex += selectedIndexDelta;
-  this.selectedIndex = Math.max( 0, Math.min( this.slides.length - 1, this.selectedIndex ) );
-
-  this.cellChange( changedCellIndex, true );
-  // backwards compatibility
-  this.emitEvent( 'cellAddedRemoved', [ changedCellIndex, selectedIndexDelta ] );
-};
-
-/**
- * logic to be run after a cell's size changes
- * @param {Element} elem - cell's element
- */
-proto.cellSizeChange = function( elem ) {
-  var cell = this.getCell( elem );
-  if ( !cell ) {
-    return;
-  }
-  cell.getSize();
-
-  var index = this.cells.indexOf( cell );
-  this.cellChange( index );
-};
-
-/**
- * logic any time a cell is changed: added, removed, or size changed
- * @param {Integer} changedCellIndex - index of the changed cell, optional
- */
-proto.cellChange = function( changedCellIndex, isPositioningSlider ) {
-  var prevSlideableWidth = this.slideableWidth;
-  this._positionCells( changedCellIndex );
-  this._getWrapShiftCells();
-  this.setGallerySize();
-  this.emitEvent( 'cellChange', [ changedCellIndex ] );
-  // position slider
-  if ( this.options.freeScroll ) {
-    // shift x by change in slideableWidth
-    // TODO fix position shifts when prepending w/ freeScroll
-    var deltaX = prevSlideableWidth - this.slideableWidth;
-    this.x += deltaX * this.cellAlign;
-    this.positionSlider();
-  } else {
-    // do not position slider after lazy load
-    if ( isPositioningSlider ) {
-      this.positionSliderAtSelected();
-    }
-    this.select( this.selectedIndex );
-  }
-};
-
-// -----  ----- //
-
-return Flickity;
-
-}));
-
-
-/***/ }),
-/* 70 */
-/***/ (function(module, exports, __webpack_require__) {
-
-var __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;// lazyload
-( function( window, factory ) {
-  // universal module definition
-  /* jshint strict: false */
-  if ( true ) {
-    // AMD
-    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [
-      __webpack_require__(48),
-      __webpack_require__(47)
-    ], __WEBPACK_AMD_DEFINE_RESULT__ = function( Flickity, utils ) {
-      return factory( window, Flickity, utils );
-    }.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__),
-				__WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
-  } else if ( typeof module == 'object' && module.exports ) {
-    // CommonJS
-    module.exports = factory(
-      window,
-      require('./flickity'),
-      require('fizzy-ui-utils')
-    );
-  } else {
-    // browser global
-    factory(
-      window,
-      window.Flickity,
-      window.fizzyUIUtils
-    );
-  }
-
-}( window, function factory( window, Flickity, utils ) {
-'use strict';
-
-Flickity.createMethods.push('_createLazyload');
-var proto = Flickity.prototype;
-
-proto._createLazyload = function() {
-  this.on( 'select', this.lazyLoad );
-};
-
-proto.lazyLoad = function() {
-  var lazyLoad = this.options.lazyLoad;
-  if ( !lazyLoad ) {
-    return;
-  }
-  // get adjacent cells, use lazyLoad option for adjacent count
-  var adjCount = typeof lazyLoad == 'number' ? lazyLoad : 0;
-  var cellElems = this.getAdjacentCellElements( adjCount );
-  // get lazy images in those cells
-  var lazyImages = [];
-  cellElems.forEach( function( cellElem ) {
-    var lazyCellImages = getCellLazyImages( cellElem );
-    lazyImages = lazyImages.concat( lazyCellImages );
-  });
-  // load lazy images
-  lazyImages.forEach( function( img ) {
-    new LazyLoader( img, this );
-  }, this );
-};
-
-function getCellLazyImages( cellElem ) {
-  // check if cell element is lazy image
-  if ( cellElem.nodeName == 'IMG' &&
-    cellElem.getAttribute('data-flickity-lazyload') ) {
-    return [ cellElem ];
-  }
-  // select lazy images in cell
-  var imgs = cellElem.querySelectorAll('img[data-flickity-lazyload]');
-  return utils.makeArray( imgs );
-}
-
-// -------------------------- LazyLoader -------------------------- //
-
-/**
- * class to handle loading images
- */
-function LazyLoader( img, flickity ) {
-  this.img = img;
-  this.flickity = flickity;
-  this.load();
-}
-
-LazyLoader.prototype.handleEvent = utils.handleEvent;
-
-LazyLoader.prototype.load = function() {
-  this.img.addEventListener( 'load', this );
-  this.img.addEventListener( 'error', this );
-  // load image
-  this.img.src = this.img.getAttribute('data-flickity-lazyload');
-  // remove attr
-  this.img.removeAttribute('data-flickity-lazyload');
-};
-
-LazyLoader.prototype.onload = function( event ) {
-  this.complete( event, 'flickity-lazyloaded' );
-};
-
-LazyLoader.prototype.onerror = function( event ) {
-  this.complete( event, 'flickity-lazyerror' );
-};
-
-LazyLoader.prototype.complete = function( event, className ) {
-  // unbind events
-  this.img.removeEventListener( 'load', this );
-  this.img.removeEventListener( 'error', this );
-
-  var cell = this.flickity.getParentCell( this.img );
-  var cellElem = cell && cell.element;
-  this.flickity.cellSizeChange( cellElem );
-
-  this.img.classList.add( className );
-  this.flickity.dispatchEvent( 'lazyLoad', event, cellElem );
-};
-
-// -----  ----- //
-
-Flickity.LazyLoader = LazyLoader;
-
-return Flickity;
-
-}));
-
-
-/***/ }),
-/* 71 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", [_vm._t("default")], 2)
-}
-var staticRenderFns = []
-render._withStripped = true
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-4a5097b8", esExports)
-  }
-}
-
-/***/ }),
-/* 72 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22173,19 +17807,13 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c(
-    "flickity",
-    { ref: "flickity", attrs: { options: _vm.flickityOptions } },
-    [
-      _c("div", { staticClass: "carousel-cell" }, [_vm._v("1")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "carousel-cell" }, [_vm._v("2")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "carousel-cell" }, [_vm._v("3")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "carousel-cell" }, [_vm._v("4")]),
-      _vm._v(" "),
-      _c("div", { staticClass: "carousel-cell" }, [_vm._v("5")])
-    ]
+    "carousel",
+    { attrs: { perPage: 1 } },
+    _vm._l(_vm.images, function(imageUrl) {
+      return _c("slide", { key: imageUrl }, [
+        _c("img", { attrs: { src: imageUrl } })
+      ])
+    })
   )
 }
 var staticRenderFns = []
@@ -22195,7 +17823,7 @@ var esExports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
   module.hot.accept()
   if (module.hot.data) {
-    require("vue-hot-reload-api")      .rerender("data-v-2ac553ee", esExports)
+    require("vue-hot-reload-api")      .rerender("data-v-32e59ccd", esExports)
   }
 }
 

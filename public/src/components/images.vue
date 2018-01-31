@@ -1,16 +1,10 @@
 <template lang="html">
-        <div>
-            <div class="center-of-sreen">
-                <p>Краткая история моих выпиваний</p>
-                <image-link-list 
-                    :image-list="imagesAvailable.paginationList ? imagesAvailable.paginationList : [0,0,0,0,0,0,0,0,0,0]"
-                    v-on:changeimage="changeCurentImage">
-                    </image-link-list>
-                <image-container :image="(imagesAvailable.list && imagesAvailable.list.length) ? currentImage : ''"></image-container>
-                <carousel></carousel>
-            </div>
-
-        </div>
+    <div class="center-of-sreen">
+        <p>Открытые страницы комиксов</p>
+        <image-link-list :image-list="imagesAvailable.paginationList" @changeimage="changeCurrentImage" />
+        <vuecarousel v-bind:images="imagesSeq" />
+        <img v-if="!currentPage" src="/comix/404image.jpg" alt="not open images">
+    </div>
 </template>
 <script>
 import ImageContainer from "./image-container.vue";
@@ -20,18 +14,17 @@ export default {
   data() {
     return {
       imagesAvailable: {},
-      currentImage: {}
+      currentPage: null,
+      imagesSeq: [],
     };
   },
-  components: {
-    ImageContainer,
-    ImageLinkList
-  },
+  components: {ImageContainer, ImageLinkList},
   methods: {
-    changeCurentImage(index) {
-      this.currentImage = this.imagesAvailable.list.find(
-        image => image.index == index
-      );
+    changeCurrentImage(index) {
+      this.currentPage = index;
+      if (!!this.imagesAvailable.list[this.currentPage]) {
+        this.imagesSeq = this.imagesAvailable.list[this.currentPage].map(image=>`/comix/${image.name}`);
+      }
     }
   },
   created: function() {
@@ -39,13 +32,12 @@ export default {
       .get(`/images/available?login=${this.$cookie.get("login")}`)
       .then(({ data }) => {
         this.imagesAvailable = data;
-        this.currentImage = data.list[0];
+        this.currentPage = data.defaultPage;
+        if (data && data.list[this.currentPage] &&  data.list[this.currentPage].length) {
+          this.imagesSeq = data.list[this.currentPage].map(image=>`/comix/${image.name}`);
+        }
       })
-      .catch(error => {
-        this.errorText = error.response.data;
-        this.isShowError = true;
-        console.error(error);
-      });
+      .catch(console.error(error));
   }
 };
 </script>

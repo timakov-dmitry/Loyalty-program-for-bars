@@ -14,7 +14,7 @@ var env = process.env.WEBPACK_ENV;
 if (env === 'production') {
   var UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
-  plugins.push(new UglifyJSPlugin({ minimize: true }));
+  plugins.push(new UglifyJSPlugin({}));
   plugins.push(new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'

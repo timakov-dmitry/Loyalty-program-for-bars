@@ -1,7 +1,9 @@
 const router = require('express').Router();
 const ImageModel = require('../models/imageModel');
 const UserModel = require('../models/userModel');
-const IMAGES_COUNT = 10;
+const SeriesModel = require('../models/seriesModel');
+const mongoose = require('mongoose');
+const IMAGES_COUNT = 6;
 
 router.get('/', function(req, res) {
   const imageCode = req.query.code;
@@ -20,32 +22,41 @@ router.get('/', function(req, res) {
     })
 });
 
-router.post('/add-new', function({body}, res) {
-  const {imageCode, login} = body;
+router.post('/add-new-image', function({body}, res) {
+  const {imageSeriesCode, login} = body;
+  let imageSeries = null;
+
+  if (!imageSeriesCode || !mongoose.Types.ObjectId.isValid(imageSeriesCode)) return res.status(500).send('Неверный код');
+  if (!login) return res.status(404).send('Не передано имя пользователя');
 
   function newUserImageRegister(user) {
-    if (user && user.login === login) return Promise.reject('Такое фото у пользователя уже есть');
+    if (!user) return Promise.reject('Пользователь не найден');
+    if (user.accessToSeries && user.accessToSeries.includes(imageSeries)) return Promise.reject('Такое фото у пользователя уже есть');
     return UserModel.update(
       {login},
-      {$push: {recentImages: imageCode}},
+      {$push: {accessToSeries: imageSeries}},
       {safe: true, upsert: false, new : false}
     )
   }
-  function checkUserImageExist(image) {
-    return UserModel.findOne({recentImages: image._id}).exec()
-  }
-  function checkImageExist(image) {
-    return image => image ? Promise.resolve(image) : Promise.reject('Не найдено фото');
+  function checkUserSeriesExist(series) {
+    imageSeries = series;
+    return UserModel
+      .findOne({login}).exec()
   }
 
-  ImageModel
-    .findOne({_id: imageCode})
+  function checkImageExist(model) {
+    if (model && model.series) return Promise.resolve(model.series);
+    return Promise.reject('Не найден код фото');
+  }
+
+  SeriesModel
+    .findOne({_id: imageSeriesCode})
     .then(checkImageExist)
-    .then(checkUserImageExist)
+    .then(checkUserSeriesExist)
     .then(newUserImageRegister)
-    .then(image => res.status(200).send(image.index))
+    .then(() => res.status(200).send('Новая серия добавлена'))
     .catch(err => {
-      res.status(400).send('error');
+      res.status(404).send(err.toString());
       console.error(err);
     })
 });
@@ -79,14 +90,17 @@ function groupImagesBySeries(images) {
 router.get('/available', function(req, res) {
   const login = req.query.login;
   let currentUser;
+
   function prepearImageListTemplate(imagesList) {
     imagesList = groupImagesBySeries(imagesList);
     res.status(200).send({
       paginationList: makeImagesLinksForPaginationLine(currentUser.accessToSeries),
-      list: imagesList
+      list: imagesList,
+      defaultPage: currentUser.accessToSeries[0]
     });
   }
-  function getNamaesOfAvaliableImages(user) {
+
+  function getNamesOfAvaliableImages(user) {
     if(!user) return Promise.reject(`Не найдень пользователь с ником "${login}"`);
     currentUser = user;
     const criteria = {
@@ -102,7 +116,7 @@ router.get('/available', function(req, res) {
   UserModel
     .findOne({login})
     .exec()
-    .then(getNamaesOfAvaliableImages)
+    .then(getNamesOfAvaliableImages)
     .then(prepearImageListTemplate)
     .catch(err => {
       res.status(404).send(err);

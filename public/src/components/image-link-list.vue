@@ -1,28 +1,15 @@
 <template lang="html">
-    <div>
-        <ul class="pagination modal-5">
-            <li><a @click="changeImage(1)" v-bind:class="{ active: !!imageList[0] }">1</a></li>
-            <li><a @click="changeImage(2)" v-bind:class="{ active: !!imageList[1] }">2</a></li>
-            <li><a @click="changeImage(3)" v-bind:class="{ active: !!imageList[2] }">3</a></li>
-            <li><a @click="changeImage(4)" v-bind:class="{ active: !!imageList[3] }">4</a></li>
-            <li><a @click="changeImage(5)" v-bind:class="{ active: !!imageList[4] }">5</a></li>
-            <li><a @click="changeImage(6)" v-bind:class="{ active: !!imageList[5] }">6</a></li>
-            <li><a @click="changeImage(7)" v-bind:class="{ active: !!imageList[6] }">7</a></li>
-            <li><a @click="changeImage(8)" v-bind:class="{ active: !!imageList[7] }">8</a></li>
-            <li><a @click="changeImage(9)" v-bind:class="{ active: !!imageList[8] }">9</a></li>
-        </ul>
-    </div>
+    <ul class="pagination modal-5">
+        <li v-for="(image, index) in imageList">
+            <a @click="changeImage(index+1)" v-bind:class="{ active: !!imageList[index] }">{{ index + 1 }}</a>
+        </li>
+    </ul>
 </template>
 
 <script>
+
 export default {
-        data() {
-            return {
-                isAvailable: [true]
-            }
-        },
         props: ['imageList'],
-        name: 'ImageLinkList',
         methods: {
             changeImage(index) {
                 this.$emit('changeimage', index);
@@ -33,7 +20,7 @@ export default {
 
 <style>
     ul {
-        min-width: 410px;
+        min-width: 230px;
     }
     .pagination {
         list-style: none;

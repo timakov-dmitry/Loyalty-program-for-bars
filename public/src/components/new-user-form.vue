@@ -41,10 +41,9 @@
         const imageCode = this.$cookie.get('new-image');
         const tryToAddImageToUser = () => {
           this.$cookie.set('login', this.login, 365);
-          return imageCode ? axios.post('/images/add-new', {imageCode, login: this.login}) : Promise.resolve('Нет нового фото');
+          return imageCode ? axios.post('/images/add-new-image', {imageSeriesCode: imageCode, login: this.login}) : Promise.resolve('Нет нового фото');
         };
         const goToImagesPage = (image) => {
-          this.$cookie.set('last-image-index', image.index, 3);
           this.$cookie.delete('new-image');
           this.$router.push('images');
         };
